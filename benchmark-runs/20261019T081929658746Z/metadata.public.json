@@ -1,0 +1,60 @@
+{
+  "region": "eu-west-2",
+  "max_duration": 1800,
+  "yes": true,
+  "outputs": "./infra/outputs.json",
+  "samples": 30,
+  "warmups": 3,
+  "repetitions": 2,
+  "interval": 0,
+  "memories": [
+    256,
+    512,
+    1024,
+    1536,
+    2048,
+    3072,
+    4096
+  ],
+  "key": "dataset.json",
+  "gb_second_price": null,
+  "request_price": 2e-07,
+  "results": null,
+  "function": "<benchmark-function>",
+  "bucket": "<benchmark-bucket>",
+  "identities": {
+    "lambda/target/function.zip": "37705d0f1a88a3cc222e3a5f0853be8dc1855f68620e3c6ad49dd4a37f0737b8",
+    "sample/dataset.json": "2939695c8e099f3d73ea84e17069dc7cbae9304be72972d0be0f5f1b698fa10e"
+  },
+  "measurementMetrics": {
+    "durationMs": "AWS REPORT Duration; primary AWS summary metric, not Java handlerMs",
+    "handlerMs": "Java handler elapsed time; excludes initialization, framework decoding/serialization and log emission",
+    "s3Ms": "Java elapsed time for full SDK GET, buffering and Content-Length validation",
+    "jsonMs": "Java dataset JSON deserialization; null for io",
+    "cpuMs": "Java elapsed calculation time for cpu or CRC32 time for io; not CPU utilization",
+    "billedMs": "AWS REPORT Billed Duration; includes applicable initialization and rounding",
+    "callerMs": "Python elapsed time including AWS CLI process, invocation and local response/log processing"
+  },
+  "originalConfiguration": {
+    "Runtime": "provided.al2023",
+    "Handler": "bootstrap",
+    "CodeSize": 24526530,
+    "Timeout": 60,
+    "MemorySize": 1024,
+    "CodeSha256": "N3BdDxqIo8wiLjpfCFO+jcGFX2hiDjxq1J3Uo38HN7g=",
+    "Architectures": [
+      "arm64"
+    ],
+    "EphemeralStorage": {
+      "Size": 512
+    },
+    "SnapStart": {
+      "ApplyOn": "None",
+      "OptimizationStatus": "Off"
+    },
+    "RuntimeVersionConfig": {
+      "RuntimeVersionArn": "arn:aws:lambda:eu-west-2::runtime:a4529b847b091eae2bf981d572b88e8436e06f2a6fc32b3ecb67fa326518cf95"
+    }
+  },
+  "publicationRedactions": "Original metadata.json is preserved locally and ignored. AWS caller identity and resource identifiers removed; project paths made relative."
+}

@@ -1,0 +1,4 @@
+START RequestId: 02d35754-ccaf-45c1-a076-9d7e651646c3 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"02d35754-ccaf-45c1-a076-9d7e651646c3","workload":"io","coldStart":false,"memoryMb":256,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":48.42281,"jsonMs":null,"cpuMs":0.12663,"handlerMs":48.550589}
+END RequestId: 02d35754-ccaf-45c1-a076-9d7e651646c3
+REPORT RequestId: 02d35754-ccaf-45c1-a076-9d7e651646c3	Duration: 85.45 ms	Billed Duration: 86 ms	Memory Size: 256 MB	Max Memory Used: 100 MB	

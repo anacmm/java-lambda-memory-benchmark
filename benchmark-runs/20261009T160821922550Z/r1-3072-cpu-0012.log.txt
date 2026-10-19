@@ -1,0 +1,4 @@
+START RequestId: debe3332-0f10-452e-b3e3-5253913a43df Version: $LATEST
+{"event":"benchmark_invocation","requestId":"debe3332-0f10-452e-b3e3-5253913a43df","workload":"cpu","coldStart":false,"memoryMb":3072,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":30.301001,"jsonMs":4.065407,"cpuMs":76.739105,"handlerMs":111.107292}
+END RequestId: debe3332-0f10-452e-b3e3-5253913a43df
+REPORT RequestId: debe3332-0f10-452e-b3e3-5253913a43df	Duration: 112.56 ms	Billed Duration: 113 ms	Memory Size: 3072 MB	Max Memory Used: 108 MB	

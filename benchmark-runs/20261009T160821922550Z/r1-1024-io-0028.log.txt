@@ -1,0 +1,4 @@
+START RequestId: b450e62b-81b3-4606-9423-ef50f459f25f Version: $LATEST
+{"event":"benchmark_invocation","requestId":"b450e62b-81b3-4606-9423-ef50f459f25f","workload":"io","coldStart":false,"memoryMb":1024,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":31.039245,"jsonMs":null,"cpuMs":0.125867,"handlerMs":31.166261}
+END RequestId: b450e62b-81b3-4606-9423-ef50f459f25f
+REPORT RequestId: b450e62b-81b3-4606-9423-ef50f459f25f	Duration: 32.57 ms	Billed Duration: 33 ms	Memory Size: 1024 MB	Max Memory Used: 130 MB	

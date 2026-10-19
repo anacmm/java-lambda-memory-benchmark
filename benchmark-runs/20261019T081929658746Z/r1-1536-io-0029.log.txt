@@ -1,0 +1,4 @@
+START RequestId: daa3b734-1166-4718-bd2b-78b2d33ddef5 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"daa3b734-1166-4718-bd2b-78b2d33ddef5","workload":"io","coldStart":false,"memoryMb":1536,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":30.050625,"jsonMs":null,"cpuMs":0.126408,"handlerMs":30.178051}
+END RequestId: daa3b734-1166-4718-bd2b-78b2d33ddef5
+REPORT RequestId: daa3b734-1166-4718-bd2b-78b2d33ddef5	Duration: 31.61 ms	Billed Duration: 32 ms	Memory Size: 1536 MB	Max Memory Used: 133 MB	

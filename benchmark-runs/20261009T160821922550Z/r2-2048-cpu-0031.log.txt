@@ -1,0 +1,4 @@
+START RequestId: cabd1679-aca0-41bd-be6c-381632018251 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"cabd1679-aca0-41bd-be6c-381632018251","workload":"cpu","coldStart":false,"memoryMb":2048,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":31.869094,"jsonMs":2.857712,"cpuMs":85.896141,"handlerMs":120.624812}
+END RequestId: cabd1679-aca0-41bd-be6c-381632018251
+REPORT RequestId: cabd1679-aca0-41bd-be6c-381632018251	Duration: 121.92 ms	Billed Duration: 122 ms	Memory Size: 2048 MB	Max Memory Used: 125 MB	

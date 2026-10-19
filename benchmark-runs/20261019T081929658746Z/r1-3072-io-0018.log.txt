@@ -1,0 +1,4 @@
+START RequestId: defa125b-96be-4cab-95fd-9b598da2b745 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"defa125b-96be-4cab-95fd-9b598da2b745","workload":"io","coldStart":false,"memoryMb":3072,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":30.583924,"jsonMs":null,"cpuMs":0.097753,"handlerMs":30.683367}
+END RequestId: defa125b-96be-4cab-95fd-9b598da2b745
+REPORT RequestId: defa125b-96be-4cab-95fd-9b598da2b745	Duration: 32.66 ms	Billed Duration: 33 ms	Memory Size: 3072 MB	Max Memory Used: 126 MB	

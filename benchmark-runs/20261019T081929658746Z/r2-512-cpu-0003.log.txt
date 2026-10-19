@@ -1,0 +1,4 @@
+START RequestId: fafec04e-4f76-4060-8543-f0a8b3e38116 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"fafec04e-4f76-4060-8543-f0a8b3e38116","workload":"cpu","coldStart":false,"memoryMb":512,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":25.085746,"jsonMs":12.896638,"cpuMs":285.998611,"handlerMs":323.982743}
+END RequestId: fafec04e-4f76-4060-8543-f0a8b3e38116
+REPORT RequestId: fafec04e-4f76-4060-8543-f0a8b3e38116	Duration: 358.12 ms	Billed Duration: 359 ms	Memory Size: 512 MB	Max Memory Used: 124 MB	

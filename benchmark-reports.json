@@ -1,0 +1,140 @@
+[
+  {
+    "requestId": "97d705b5-ee13-43ad-9284-c529a9d978a9",
+    "durationMs": 356.20,
+    "billedMs": 595,
+    "memoryMb": 1024
+  },
+  {
+    "requestId": "44d97616-3a06-498e-8048-0322f3bd9acf",
+    "durationMs": 41.75,
+    "billedMs": 42,
+    "memoryMb": 1024
+  },
+  {
+    "requestId": "073e3ee9-3e7d-4eb9-879b-305b2de3f2c2",
+    "durationMs": 203.67,
+    "billedMs": 204,
+    "memoryMb": 1024
+  },
+  {
+    "requestId": "25ebae25-3cc4-4223-b089-02c1b1452e9e",
+    "durationMs": 1473.99,
+    "billedMs": 1707,
+    "memoryMb": 256
+  },
+  {
+    "requestId": "4ab78dfa-1781-433a-b07e-d0875c3c794e",
+    "durationMs": 771.44,
+    "billedMs": 772,
+    "memoryMb": 256
+  },
+  {
+    "requestId": "3702356b-13f5-44d5-aec7-86e9340cab4e",
+    "durationMs": 116.72,
+    "billedMs": 117,
+    "memoryMb": 256
+  },
+  {
+    "requestId": "74b5cfe2-c91c-4e93-b63b-4242695eecb1",
+    "durationMs": 104.32,
+    "billedMs": 105,
+    "memoryMb": 256
+  },
+  {
+    "requestId": "7b16aa9c-b7bc-40ba-aee2-1b9ad2757df0",
+    "durationMs": 803.37,
+    "billedMs": 1094,
+    "memoryMb": 512
+  },
+  {
+    "requestId": "4e05bd9e-4897-44c2-ab0f-83b537110dbb",
+    "durationMs": 459.77,
+    "billedMs": 460,
+    "memoryMb": 512
+  },
+  {
+    "requestId": "da7a8beb-06bd-4aba-95e6-24179f290e69",
+    "durationMs": 70.88,
+    "billedMs": 71,
+    "memoryMb": 512
+  },
+  {
+    "requestId": "feb53430-990a-40be-be1c-0eff90b53d5a",
+    "durationMs": 54.61,
+    "billedMs": 55,
+    "memoryMb": 512
+  },
+  {
+    "requestId": "fb9c3fdd-a634-4f28-bd85-33a83b99fa94",
+    "durationMs": 254.94,
+    "billedMs": 513,
+    "memoryMb": 1536
+  },
+  {
+    "requestId": "4d870377-657a-4c21-af75-1bd509a665de",
+    "durationMs": 159.97,
+    "billedMs": 160,
+    "memoryMb": 1536
+  },
+  {
+    "requestId": "650e1bd2-c673-4234-8e86-b5a39b34b49f",
+    "durationMs": 40.13,
+    "billedMs": 41,
+    "memoryMb": 1536
+  },
+  {
+    "requestId": "ae3f48a0-9117-48dc-8d84-52b62ee49335",
+    "durationMs": 39.03,
+    "billedMs": 40,
+    "memoryMb": 1536
+  },
+  {
+    "requestId": "d6e3529f-6fc9-4e77-b80b-b0865993cbd5",
+    "durationMs": 235.88,
+    "billedMs": 471,
+    "memoryMb": 2048
+  },
+  {
+    "requestId": "d963d4a5-f990-4066-8c54-f2e8a71fa3ca",
+    "durationMs": 139.47,
+    "billedMs": 140,
+    "memoryMb": 2048
+  },
+  {
+    "requestId": "03b4c384-d48d-4b6f-9c14-a5d8051b7215",
+    "durationMs": 40.43,
+    "billedMs": 41,
+    "memoryMb": 2048
+  },
+  {
+    "requestId": "74bdfb5e-9d8a-4f6c-a809-035bfe0cc800",
+    "durationMs": 36.82,
+    "billedMs": 37,
+    "memoryMb": 2048
+  },
+  {
+    "requestId": "fbfc1baa-968a-478d-8c3e-bfe9e22c6b78",
+    "durationMs": 211.22,
+    "billedMs": 449,
+    "memoryMb": 3072
+  },
+  {
+    "requestId": "4cef1cbe-82e0-47ec-8d00-8933296ba06e",
+    "durationMs": 125.89,
+    "billedMs": 126,
+    "memoryMb": 3072
+  },
+  {
+    "requestId": "4edde9ec-96c4-4b6a-91b0-e89cd46d2b5e",
+    "durationMs": 39.61,
+    "billedMs": 40,
+    "memoryMb": 3072
+  },
+  {
+    "requestId": "921843e0-7f88-4f25-98a1-08d36572b565",
+    "durationMs": 43.31,
+    "billedMs": 44,
+    "memoryMb": 3072
+  }
+]

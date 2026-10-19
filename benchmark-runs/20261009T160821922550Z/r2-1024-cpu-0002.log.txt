@@ -1,0 +1,4 @@
+START RequestId: bbdd30e2-02b0-4338-808a-16134c081a35 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"bbdd30e2-02b0-4338-808a-16134c081a35","workload":"cpu","coldStart":false,"memoryMb":1024,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":29.838581,"jsonMs":3.702843,"cpuMs":185.752459,"handlerMs":219.295122}
+END RequestId: bbdd30e2-02b0-4338-808a-16134c081a35
+REPORT RequestId: bbdd30e2-02b0-4338-808a-16134c081a35	Duration: 220.69 ms	Billed Duration: 221 ms	Memory Size: 1024 MB	Max Memory Used: 119 MB	

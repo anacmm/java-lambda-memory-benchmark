@@ -1,0 +1,4 @@
+START RequestId: dcbac291-0e1a-423e-aaf5-ccf32ad4f8ef Version: $LATEST
+{"event":"benchmark_invocation","requestId":"dcbac291-0e1a-423e-aaf5-ccf32ad4f8ef","workload":"cpu","coldStart":false,"memoryMb":4096,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":35.164633,"jsonMs":2.853568,"cpuMs":75.889312,"handlerMs":113.909467}
+END RequestId: dcbac291-0e1a-423e-aaf5-ccf32ad4f8ef
+REPORT RequestId: dcbac291-0e1a-423e-aaf5-ccf32ad4f8ef	Duration: 115.23 ms	Billed Duration: 116 ms	Memory Size: 4096 MB	Max Memory Used: 127 MB	

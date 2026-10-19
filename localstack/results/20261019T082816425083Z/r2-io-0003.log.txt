@@ -1,0 +1,4 @@
+START RequestId: 37fc8bc0-daba-4774-a828-d11e32c1e761 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"37fc8bc0-daba-4774-a828-d11e32c1e761","workload":"io","coldStart":false,"memoryMb":1024,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":4.39425,"jsonMs":null,"cpuMs":0.121167,"handlerMs":4.516792}
+END RequestId: 37fc8bc0-daba-4774-a828-d11e32c1e761
+REPORT RequestId: 37fc8bc0-daba-4774-a828-d11e32c1e761	Duration: 5.70 ms	Billed Duration: 6 ms	Memory Size: 1024 MB	Max Memory Used: 1024 MB	

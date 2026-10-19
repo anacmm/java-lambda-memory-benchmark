@@ -1,0 +1,4 @@
+START RequestId: 3be18f4b-a95e-43df-8112-fcc3f09c95f5 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"3be18f4b-a95e-43df-8112-fcc3f09c95f5","workload":"cpu","coldStart":false,"memoryMb":512,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":39.246498,"jsonMs":13.620743,"cpuMs":365.253751,"handlerMs":418.122461}
+END RequestId: 3be18f4b-a95e-43df-8112-fcc3f09c95f5
+REPORT RequestId: 3be18f4b-a95e-43df-8112-fcc3f09c95f5	Duration: 433.92 ms	Billed Duration: 434 ms	Memory Size: 512 MB	Max Memory Used: 118 MB	

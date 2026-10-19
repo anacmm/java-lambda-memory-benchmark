@@ -1,0 +1,4 @@
+START RequestId: 503bcccd-fba9-4440-bef0-ecc2883ce987 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"503bcccd-fba9-4440-bef0-ecc2883ce987","workload":"io","coldStart":false,"memoryMb":512,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":32.928391,"jsonMs":null,"cpuMs":0.081776,"handlerMs":33.011543}
+END RequestId: 503bcccd-fba9-4440-bef0-ecc2883ce987
+REPORT RequestId: 503bcccd-fba9-4440-bef0-ecc2883ce987	Duration: 47.57 ms	Billed Duration: 48 ms	Memory Size: 512 MB	Max Memory Used: 108 MB	

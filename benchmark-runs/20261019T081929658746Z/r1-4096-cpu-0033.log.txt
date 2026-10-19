@@ -1,0 +1,4 @@
+START RequestId: 2a232097-a0a7-4ace-acca-cd208c087de6 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"2a232097-a0a7-4ace-acca-cd208c087de6","workload":"cpu","coldStart":false,"memoryMb":4096,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":33.215979,"jsonMs":2.851486,"cpuMs":75.810806,"handlerMs":111.880403}
+END RequestId: 2a232097-a0a7-4ace-acca-cd208c087de6
+REPORT RequestId: 2a232097-a0a7-4ace-acca-cd208c087de6	Duration: 113.19 ms	Billed Duration: 114 ms	Memory Size: 4096 MB	Max Memory Used: 121 MB	

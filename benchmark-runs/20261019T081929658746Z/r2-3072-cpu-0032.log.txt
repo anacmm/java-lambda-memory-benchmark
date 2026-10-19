@@ -1,0 +1,4 @@
+START RequestId: fdda6498-bf72-4d23-8a9d-e20e1a78e06f Version: $LATEST
+{"event":"benchmark_invocation","requestId":"fdda6498-bf72-4d23-8a9d-e20e1a78e06f","workload":"cpu","coldStart":false,"memoryMb":3072,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":36.078979,"jsonMs":2.883015,"cpuMs":76.291451,"handlerMs":115.255011}
+END RequestId: fdda6498-bf72-4d23-8a9d-e20e1a78e06f
+REPORT RequestId: fdda6498-bf72-4d23-8a9d-e20e1a78e06f	Duration: 116.54 ms	Billed Duration: 117 ms	Memory Size: 3072 MB	Max Memory Used: 119 MB	

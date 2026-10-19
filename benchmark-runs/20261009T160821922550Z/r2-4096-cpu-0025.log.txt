@@ -1,0 +1,4 @@
+START RequestId: 36650edb-bed2-45cd-b545-09331c9cd9e9 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"36650edb-bed2-45cd-b545-09331c9cd9e9","workload":"cpu","coldStart":false,"memoryMb":4096,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":35.546939,"jsonMs":2.820197,"cpuMs":75.942974,"handlerMs":114.311893}
+END RequestId: 36650edb-bed2-45cd-b545-09331c9cd9e9
+REPORT RequestId: 36650edb-bed2-45cd-b545-09331c9cd9e9	Duration: 115.50 ms	Billed Duration: 116 ms	Memory Size: 4096 MB	Max Memory Used: 121 MB	

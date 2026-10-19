@@ -1,0 +1,4 @@
+START RequestId: bed650b9-4a60-48ae-914e-bea6afdeb75c Version: $LATEST
+{"event":"benchmark_invocation","requestId":"bed650b9-4a60-48ae-914e-bea6afdeb75c","workload":"cpu","coldStart":false,"memoryMb":1536,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":28.655014,"jsonMs":3.308799,"cpuMs":106.273859,"handlerMs":138.239285}
+END RequestId: bed650b9-4a60-48ae-914e-bea6afdeb75c
+REPORT RequestId: bed650b9-4a60-48ae-914e-bea6afdeb75c	Duration: 140.85 ms	Billed Duration: 141 ms	Memory Size: 1536 MB	Max Memory Used: 119 MB	

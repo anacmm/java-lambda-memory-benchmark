@@ -1,0 +1,3 @@
+#!/bin/sh
+cd /var/task
+exec ./runner -Djavax.net.ssl.trustStore=/var/task/cacerts -Djavax.net.ssl.trustStorePassword=changeit

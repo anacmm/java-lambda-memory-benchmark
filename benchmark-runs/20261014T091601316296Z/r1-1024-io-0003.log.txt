@@ -1,0 +1,4 @@
+START RequestId: dbd17005-8922-419d-90f4-b0a236e07a5d Version: $LATEST
+{"event":"benchmark_invocation","requestId":"dbd17005-8922-419d-90f4-b0a236e07a5d","workload":"io","coldStart":false,"memoryMb":1024,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":33.882419,"jsonMs":null,"cpuMs":0.082988,"handlerMs":33.966781}
+END RequestId: dbd17005-8922-419d-90f4-b0a236e07a5d
+REPORT RequestId: dbd17005-8922-419d-90f4-b0a236e07a5d	Duration: 35.19 ms	Billed Duration: 36 ms	Memory Size: 1024 MB	Max Memory Used: 127 MB	

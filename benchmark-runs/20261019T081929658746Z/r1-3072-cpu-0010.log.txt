@@ -1,0 +1,4 @@
+START RequestId: def2072a-0445-466a-9061-e684d3559df0 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"def2072a-0445-466a-9061-e684d3559df0","workload":"cpu","coldStart":false,"memoryMb":3072,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":32.975208,"jsonMs":3.867205,"cpuMs":75.779385,"handlerMs":112.623539}
+END RequestId: def2072a-0445-466a-9061-e684d3559df0
+REPORT RequestId: def2072a-0445-466a-9061-e684d3559df0	Duration: 113.97 ms	Billed Duration: 114 ms	Memory Size: 3072 MB	Max Memory Used: 105 MB	

@@ -1,0 +1,4 @@
+START RequestId: 3bac2195-3b14-4359-bd23-0d08142d3d3d Version: $LATEST
+{"event":"benchmark_invocation","requestId":"3bac2195-3b14-4359-bd23-0d08142d3d3d","workload":"io","coldStart":false,"memoryMb":2048,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":37.037153,"jsonMs":null,"cpuMs":0.082363,"handlerMs":37.121129}
+END RequestId: 3bac2195-3b14-4359-bd23-0d08142d3d3d
+REPORT RequestId: 3bac2195-3b14-4359-bd23-0d08142d3d3d	Duration: 38.41 ms	Billed Duration: 39 ms	Memory Size: 2048 MB	Max Memory Used: 90 MB	

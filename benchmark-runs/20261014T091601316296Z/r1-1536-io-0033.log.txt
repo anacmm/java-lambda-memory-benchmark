@@ -1,0 +1,4 @@
+START RequestId: 09281433-de01-4c93-af03-018abdd1a21c Version: $LATEST
+{"event":"benchmark_invocation","requestId":"09281433-de01-4c93-af03-018abdd1a21c","workload":"io","coldStart":false,"memoryMb":1536,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":24.726964,"jsonMs":null,"cpuMs":0.082201,"handlerMs":24.810377}
+END RequestId: 09281433-de01-4c93-af03-018abdd1a21c
+REPORT RequestId: 09281433-de01-4c93-af03-018abdd1a21c	Duration: 25.94 ms	Billed Duration: 26 ms	Memory Size: 1536 MB	Max Memory Used: 132 MB	

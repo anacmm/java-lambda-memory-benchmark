@@ -1,0 +1,4 @@
+START RequestId: fbc453c7-3002-4303-9108-3cb27ac48e93 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"fbc453c7-3002-4303-9108-3cb27ac48e93","workload":"cpu","coldStart":false,"memoryMb":4096,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":29.161875,"jsonMs":2.847162,"cpuMs":75.785013,"handlerMs":107.795712}
+END RequestId: fbc453c7-3002-4303-9108-3cb27ac48e93
+REPORT RequestId: fbc453c7-3002-4303-9108-3cb27ac48e93	Duration: 109.01 ms	Billed Duration: 110 ms	Memory Size: 4096 MB	Max Memory Used: 117 MB	

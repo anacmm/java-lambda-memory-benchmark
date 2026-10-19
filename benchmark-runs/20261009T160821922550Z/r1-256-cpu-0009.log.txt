@@ -1,0 +1,4 @@
+START RequestId: d960c56b-ca94-42a1-9812-01e1d0e601fd Version: $LATEST
+{"event":"benchmark_invocation","requestId":"d960c56b-ca94-42a1-9812-01e1d0e601fd","workload":"cpu","coldStart":false,"memoryMb":256,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":42.834892,"jsonMs":3.852225,"cpuMs":636.075758,"handlerMs":682.764736}
+END RequestId: d960c56b-ca94-42a1-9812-01e1d0e601fd
+REPORT RequestId: d960c56b-ca94-42a1-9812-01e1d0e601fd	Duration: 721.08 ms	Billed Duration: 722 ms	Memory Size: 256 MB	Max Memory Used: 99 MB	

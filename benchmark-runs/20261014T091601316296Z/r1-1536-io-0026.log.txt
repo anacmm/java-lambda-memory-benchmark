@@ -1,0 +1,4 @@
+START RequestId: cd05b970-4037-4614-ba1c-886eb4238be3 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"cd05b970-4037-4614-ba1c-886eb4238be3","workload":"io","coldStart":false,"memoryMb":1536,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":29.867767,"jsonMs":null,"cpuMs":0.082362,"handlerMs":29.951682}
+END RequestId: cd05b970-4037-4614-ba1c-886eb4238be3
+REPORT RequestId: cd05b970-4037-4614-ba1c-886eb4238be3	Duration: 31.16 ms	Billed Duration: 32 ms	Memory Size: 1536 MB	Max Memory Used: 126 MB	

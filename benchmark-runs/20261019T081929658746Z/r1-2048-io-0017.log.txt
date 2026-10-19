@@ -1,0 +1,4 @@
+START RequestId: f122ed89-c285-4753-91ab-33f938bae859 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"f122ed89-c285-4753-91ab-33f938bae859","workload":"io","coldStart":false,"memoryMb":2048,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":23.412834,"jsonMs":null,"cpuMs":0.082673,"handlerMs":23.496797}
+END RequestId: f122ed89-c285-4753-91ab-33f938bae859
+REPORT RequestId: f122ed89-c285-4753-91ab-33f938bae859	Duration: 24.50 ms	Billed Duration: 25 ms	Memory Size: 2048 MB	Max Memory Used: 126 MB	

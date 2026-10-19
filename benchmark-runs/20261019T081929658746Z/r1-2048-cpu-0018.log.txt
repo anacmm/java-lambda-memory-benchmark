@@ -1,0 +1,4 @@
+START RequestId: ccb2421c-f06d-494a-8c30-8dbf544fe4f3 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"ccb2421c-f06d-494a-8c30-8dbf544fe4f3","workload":"cpu","coldStart":false,"memoryMb":2048,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":37.944651,"jsonMs":2.831997,"cpuMs":85.793679,"handlerMs":126.571887}
+END RequestId: ccb2421c-f06d-494a-8c30-8dbf544fe4f3
+REPORT RequestId: ccb2421c-f06d-494a-8c30-8dbf544fe4f3	Duration: 127.83 ms	Billed Duration: 128 ms	Memory Size: 2048 MB	Max Memory Used: 120 MB	

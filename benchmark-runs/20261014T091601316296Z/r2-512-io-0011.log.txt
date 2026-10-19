@@ -1,0 +1,4 @@
+START RequestId: 1bfad45b-2125-4650-bb6f-dce583990f16 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"1bfad45b-2125-4650-bb6f-dce583990f16","workload":"io","coldStart":false,"memoryMb":512,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":27.606468,"jsonMs":null,"cpuMs":0.082358,"handlerMs":27.690295}
+END RequestId: 1bfad45b-2125-4650-bb6f-dce583990f16
+REPORT RequestId: 1bfad45b-2125-4650-bb6f-dce583990f16	Duration: 35.43 ms	Billed Duration: 36 ms	Memory Size: 512 MB	Max Memory Used: 93 MB	

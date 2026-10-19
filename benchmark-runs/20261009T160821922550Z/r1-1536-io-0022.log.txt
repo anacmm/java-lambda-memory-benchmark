@@ -1,0 +1,4 @@
+START RequestId: cabf868a-5986-4678-be5a-b139cf8e2141 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"cabf868a-5986-4678-be5a-b139cf8e2141","workload":"io","coldStart":false,"memoryMb":1536,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":33.578259,"jsonMs":null,"cpuMs":0.082666,"handlerMs":33.662395}
+END RequestId: cabf868a-5986-4678-be5a-b139cf8e2141
+REPORT RequestId: cabf868a-5986-4678-be5a-b139cf8e2141	Duration: 34.88 ms	Billed Duration: 35 ms	Memory Size: 1536 MB	Max Memory Used: 126 MB	

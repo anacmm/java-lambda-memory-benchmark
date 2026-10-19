@@ -1,0 +1,4 @@
+START RequestId: 870f8aaf-a787-4ac2-b571-88ae98d7e2b7 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"870f8aaf-a787-4ac2-b571-88ae98d7e2b7","workload":"io","coldStart":false,"memoryMb":1024,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":36.257549,"jsonMs":null,"cpuMs":0.084005,"handlerMs":36.342938}
+END RequestId: 870f8aaf-a787-4ac2-b571-88ae98d7e2b7
+REPORT RequestId: 870f8aaf-a787-4ac2-b571-88ae98d7e2b7	Duration: 37.71 ms	Billed Duration: 38 ms	Memory Size: 1024 MB	Max Memory Used: 112 MB	

@@ -1,0 +1,4 @@
+START RequestId: 8bc55dec-ddac-4949-adde-c520500770a0 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"8bc55dec-ddac-4949-adde-c520500770a0","workload":"io","coldStart":false,"memoryMb":1024,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":35.724299,"jsonMs":null,"cpuMs":0.125629,"handlerMs":35.851405}
+END RequestId: 8bc55dec-ddac-4949-adde-c520500770a0
+REPORT RequestId: 8bc55dec-ddac-4949-adde-c520500770a0	Duration: 37.12 ms	Billed Duration: 38 ms	Memory Size: 1024 MB	Max Memory Used: 134 MB	

@@ -1,0 +1,4 @@
+START RequestId: cbb67215-a274-4afe-8556-0eea53582d84 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"cbb67215-a274-4afe-8556-0eea53582d84","workload":"io","coldStart":false,"memoryMb":3072,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":26.390102,"jsonMs":null,"cpuMs":0.083404,"handlerMs":26.47456}
+END RequestId: cbb67215-a274-4afe-8556-0eea53582d84
+REPORT RequestId: cbb67215-a274-4afe-8556-0eea53582d84	Duration: 27.73 ms	Billed Duration: 28 ms	Memory Size: 3072 MB	Max Memory Used: 126 MB	

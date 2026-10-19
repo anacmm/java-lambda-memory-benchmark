@@ -1,0 +1,4 @@
+START RequestId: 1964bdfc-12ec-40bc-91da-bd215e92785f Version: $LATEST
+{"event":"benchmark_invocation","requestId":"1964bdfc-12ec-40bc-91da-bd215e92785f","workload":"cpu","coldStart":false,"memoryMb":512,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":30.078128,"jsonMs":2.991916,"cpuMs":326.430845,"handlerMs":359.502408}
+END RequestId: 1964bdfc-12ec-40bc-91da-bd215e92785f
+REPORT RequestId: 1964bdfc-12ec-40bc-91da-bd215e92785f	Duration: 360.92 ms	Billed Duration: 361 ms	Memory Size: 512 MB	Max Memory Used: 120 MB	

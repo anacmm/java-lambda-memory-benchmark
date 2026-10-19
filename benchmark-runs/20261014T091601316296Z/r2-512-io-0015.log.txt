@@ -1,0 +1,4 @@
+START RequestId: d778d735-d951-4871-baea-f8642f6dcdac Version: $LATEST
+{"event":"benchmark_invocation","requestId":"d778d735-d951-4871-baea-f8642f6dcdac","workload":"io","coldStart":false,"memoryMb":512,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":53.614051,"jsonMs":null,"cpuMs":0.083668,"handlerMs":53.6992}
+END RequestId: d778d735-d951-4871-baea-f8642f6dcdac
+REPORT RequestId: d778d735-d951-4871-baea-f8642f6dcdac	Duration: 55.03 ms	Billed Duration: 56 ms	Memory Size: 512 MB	Max Memory Used: 98 MB	

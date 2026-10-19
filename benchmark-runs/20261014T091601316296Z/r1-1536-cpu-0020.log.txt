@@ -1,0 +1,4 @@
+START RequestId: f4221c6a-5cfe-4281-ac89-d751ae52ec95 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"f4221c6a-5cfe-4281-ac89-d751ae52ec95","workload":"cpu","coldStart":false,"memoryMb":1536,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":31.559302,"jsonMs":2.876409,"cpuMs":106.679772,"handlerMs":141.11722}
+END RequestId: f4221c6a-5cfe-4281-ac89-d751ae52ec95
+REPORT RequestId: f4221c6a-5cfe-4281-ac89-d751ae52ec95	Duration: 142.41 ms	Billed Duration: 143 ms	Memory Size: 1536 MB	Max Memory Used: 120 MB	

@@ -1,0 +1,4 @@
+START RequestId: eadd6160-85b6-4a2b-befd-6a37b81c96e2 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"eadd6160-85b6-4a2b-befd-6a37b81c96e2","workload":"cpu","coldStart":false,"memoryMb":256,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":33.749681,"jsonMs":2.893357,"cpuMs":636.770713,"handlerMs":673.415084}
+END RequestId: eadd6160-85b6-4a2b-befd-6a37b81c96e2
+REPORT RequestId: eadd6160-85b6-4a2b-befd-6a37b81c96e2	Duration: 708.76 ms	Billed Duration: 709 ms	Memory Size: 256 MB	Max Memory Used: 119 MB	

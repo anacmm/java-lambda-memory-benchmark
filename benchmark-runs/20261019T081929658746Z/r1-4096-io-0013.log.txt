@@ -1,0 +1,4 @@
+START RequestId: fdcd5fa3-3120-4436-90fc-3a34ed1a1162 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"fdcd5fa3-3120-4436-90fc-3a34ed1a1162","workload":"io","coldStart":false,"memoryMb":4096,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":32.45789,"jsonMs":null,"cpuMs":0.081994,"handlerMs":32.541385}
+END RequestId: fdcd5fa3-3120-4436-90fc-3a34ed1a1162
+REPORT RequestId: fdcd5fa3-3120-4436-90fc-3a34ed1a1162	Duration: 33.73 ms	Billed Duration: 34 ms	Memory Size: 4096 MB	Max Memory Used: 124 MB	

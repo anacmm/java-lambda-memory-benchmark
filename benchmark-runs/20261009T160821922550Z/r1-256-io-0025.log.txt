@@ -1,0 +1,4 @@
+START RequestId: f60fc378-e459-4bf9-a62b-087e41730421 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"f60fc378-e459-4bf9-a62b-087e41730421","workload":"io","coldStart":false,"memoryMb":256,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":28.71695,"jsonMs":null,"cpuMs":0.082246,"handlerMs":28.800628}
+END RequestId: f60fc378-e459-4bf9-a62b-087e41730421
+REPORT RequestId: f60fc378-e459-4bf9-a62b-087e41730421	Duration: 66.45 ms	Billed Duration: 67 ms	Memory Size: 256 MB	Max Memory Used: 122 MB	

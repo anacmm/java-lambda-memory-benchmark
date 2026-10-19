@@ -1,0 +1,4 @@
+START RequestId: ecbb0903-f145-4b97-bb30-64489c667067 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"ecbb0903-f145-4b97-bb30-64489c667067","workload":"cpu","coldStart":false,"memoryMb":1024,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":36.708122,"jsonMs":2.840316,"cpuMs":166.382789,"handlerMs":205.93322}
+END RequestId: ecbb0903-f145-4b97-bb30-64489c667067
+REPORT RequestId: ecbb0903-f145-4b97-bb30-64489c667067	Duration: 207.27 ms	Billed Duration: 208 ms	Memory Size: 1024 MB	Max Memory Used: 122 MB	

@@ -1,0 +1,4 @@
+START RequestId: 67797499-bafa-43e3-8c8d-6f775b3c6fdc Version: $LATEST
+{"event":"benchmark_invocation","requestId":"67797499-bafa-43e3-8c8d-6f775b3c6fdc","workload":"cpu","coldStart":false,"memoryMb":2048,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":30.857676,"jsonMs":3.85442,"cpuMs":85.927607,"handlerMs":120.641681}
+END RequestId: 67797499-bafa-43e3-8c8d-6f775b3c6fdc
+REPORT RequestId: 67797499-bafa-43e3-8c8d-6f775b3c6fdc	Duration: 122.04 ms	Billed Duration: 123 ms	Memory Size: 2048 MB	Max Memory Used: 91 MB	

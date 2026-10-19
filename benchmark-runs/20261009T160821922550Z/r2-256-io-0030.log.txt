@@ -1,0 +1,4 @@
+START RequestId: ea050e2f-2972-48ba-b117-52e1dffe4ff2 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"ea050e2f-2972-48ba-b117-52e1dffe4ff2","workload":"io","coldStart":false,"memoryMb":256,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":41.860431,"jsonMs":null,"cpuMs":0.125661,"handlerMs":41.987273}
+END RequestId: ea050e2f-2972-48ba-b117-52e1dffe4ff2
+REPORT RequestId: ea050e2f-2972-48ba-b117-52e1dffe4ff2	Duration: 65.11 ms	Billed Duration: 66 ms	Memory Size: 256 MB	Max Memory Used: 110 MB	

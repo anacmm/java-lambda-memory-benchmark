@@ -1,0 +1,4 @@
+START RequestId: dadf9362-650f-4fc6-9712-7e29cf1bf8a5 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"dadf9362-650f-4fc6-9712-7e29cf1bf8a5","workload":"cpu","coldStart":false,"memoryMb":1536,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":34.640049,"jsonMs":3.606359,"cpuMs":145.423294,"handlerMs":183.670949}
+END RequestId: dadf9362-650f-4fc6-9712-7e29cf1bf8a5
+REPORT RequestId: dadf9362-650f-4fc6-9712-7e29cf1bf8a5	Duration: 185.05 ms	Billed Duration: 186 ms	Memory Size: 1536 MB	Max Memory Used: 124 MB	

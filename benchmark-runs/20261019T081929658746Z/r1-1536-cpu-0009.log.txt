@@ -1,0 +1,4 @@
+START RequestId: ada604fd-21b7-449a-ad38-3b62c60b37e9 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"ada604fd-21b7-449a-ad38-3b62c60b37e9","workload":"cpu","coldStart":false,"memoryMb":1536,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":37.087212,"jsonMs":4.981899,"cpuMs":145.721263,"handlerMs":187.791565}
+END RequestId: ada604fd-21b7-449a-ad38-3b62c60b37e9
+REPORT RequestId: ada604fd-21b7-449a-ad38-3b62c60b37e9	Duration: 189.28 ms	Billed Duration: 190 ms	Memory Size: 1536 MB	Max Memory Used: 107 MB	

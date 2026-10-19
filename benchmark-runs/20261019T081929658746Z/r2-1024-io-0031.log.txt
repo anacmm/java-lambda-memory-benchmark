@@ -1,0 +1,4 @@
+START RequestId: daf18abd-36d3-4202-8ca0-ea21a48bea2d Version: $LATEST
+{"event":"benchmark_invocation","requestId":"daf18abd-36d3-4202-8ca0-ea21a48bea2d","workload":"io","coldStart":false,"memoryMb":1024,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":35.381267,"jsonMs":null,"cpuMs":0.083799,"handlerMs":35.466429}
+END RequestId: daf18abd-36d3-4202-8ca0-ea21a48bea2d
+REPORT RequestId: daf18abd-36d3-4202-8ca0-ea21a48bea2d	Duration: 36.60 ms	Billed Duration: 37 ms	Memory Size: 1024 MB	Max Memory Used: 117 MB	

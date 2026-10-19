@@ -1,0 +1,4 @@
+START RequestId: 19481425-4bbe-460b-af06-927c1923e834 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"19481425-4bbe-460b-af06-927c1923e834","workload":"io","coldStart":false,"memoryMb":1024,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":6.297375,"jsonMs":null,"cpuMs":0.079916,"handlerMs":6.379292}
+END RequestId: 19481425-4bbe-460b-af06-927c1923e834
+REPORT RequestId: 19481425-4bbe-460b-af06-927c1923e834	Duration: 7.47 ms	Billed Duration: 8 ms	Memory Size: 1024 MB	Max Memory Used: 1024 MB	

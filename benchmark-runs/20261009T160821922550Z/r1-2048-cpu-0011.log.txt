@@ -1,0 +1,4 @@
+START RequestId: de1b2049-f230-4d0a-ac2c-ea2c6105b957 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"de1b2049-f230-4d0a-ac2c-ea2c6105b957","workload":"cpu","coldStart":false,"memoryMb":2048,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":31.759546,"jsonMs":3.886032,"cpuMs":85.784807,"handlerMs":121.432322}
+END RequestId: de1b2049-f230-4d0a-ac2c-ea2c6105b957
+REPORT RequestId: de1b2049-f230-4d0a-ac2c-ea2c6105b957	Duration: 123.67 ms	Billed Duration: 124 ms	Memory Size: 2048 MB	Max Memory Used: 108 MB	

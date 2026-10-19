@@ -1,0 +1,4 @@
+START RequestId: dcb00893-3f01-4991-9903-5e919c1233e1 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"dcb00893-3f01-4991-9903-5e919c1233e1","workload":"cpu","coldStart":false,"memoryMb":4096,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":42.298692,"jsonMs":3.091832,"cpuMs":75.845245,"handlerMs":121.237554}
+END RequestId: dcb00893-3f01-4991-9903-5e919c1233e1
+REPORT RequestId: dcb00893-3f01-4991-9903-5e919c1233e1	Duration: 122.46 ms	Billed Duration: 123 ms	Memory Size: 4096 MB	Max Memory Used: 121 MB	

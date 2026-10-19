@@ -1,0 +1,4 @@
+START RequestId: e163df1c-4651-41c5-9809-2713f920e285 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"e163df1c-4651-41c5-9809-2713f920e285","workload":"cpu","coldStart":false,"memoryMb":2048,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":33.811858,"jsonMs":2.898451,"cpuMs":85.77393,"handlerMs":122.485794}
+END RequestId: e163df1c-4651-41c5-9809-2713f920e285
+REPORT RequestId: e163df1c-4651-41c5-9809-2713f920e285	Duration: 123.78 ms	Billed Duration: 124 ms	Memory Size: 2048 MB	Max Memory Used: 125 MB	

@@ -1,0 +1,4 @@
+START RequestId: ed78db21-df64-4104-a416-648a90815318 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"ed78db21-df64-4104-a416-648a90815318","workload":"cpu","coldStart":false,"memoryMb":4096,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":35.477318,"jsonMs":2.964214,"cpuMs":75.83754,"handlerMs":114.280867}
+END RequestId: ed78db21-df64-4104-a416-648a90815318
+REPORT RequestId: ed78db21-df64-4104-a416-648a90815318	Duration: 115.52 ms	Billed Duration: 116 ms	Memory Size: 4096 MB	Max Memory Used: 121 MB	

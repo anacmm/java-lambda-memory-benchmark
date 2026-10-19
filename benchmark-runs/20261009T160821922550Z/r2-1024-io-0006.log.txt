@@ -1,0 +1,4 @@
+START RequestId: d8060ada-1778-49b4-94ec-5bebfb1e3f2b Version: $LATEST
+{"event":"benchmark_invocation","requestId":"d8060ada-1778-49b4-94ec-5bebfb1e3f2b","workload":"io","coldStart":false,"memoryMb":1024,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":34.951023,"jsonMs":null,"cpuMs":0.125851,"handlerMs":35.07785}
+END RequestId: d8060ada-1778-49b4-94ec-5bebfb1e3f2b
+REPORT RequestId: d8060ada-1778-49b4-94ec-5bebfb1e3f2b	Duration: 36.48 ms	Billed Duration: 37 ms	Memory Size: 1024 MB	Max Memory Used: 88 MB	

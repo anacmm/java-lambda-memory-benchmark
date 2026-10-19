@@ -1,0 +1,4 @@
+START RequestId: fba8f407-2ef6-43ad-94fc-e1c11850b053 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"fba8f407-2ef6-43ad-94fc-e1c11850b053","workload":"cpu","coldStart":false,"memoryMb":1024,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":5.15375,"jsonMs":13.258458,"cpuMs":76.985042,"handlerMs":95.3995}
+END RequestId: fba8f407-2ef6-43ad-94fc-e1c11850b053
+REPORT RequestId: fba8f407-2ef6-43ad-94fc-e1c11850b053	Duration: 96.56 ms	Billed Duration: 97 ms	Memory Size: 1024 MB	Max Memory Used: 1024 MB	

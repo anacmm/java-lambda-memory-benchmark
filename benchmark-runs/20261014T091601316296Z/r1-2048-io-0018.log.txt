@@ -1,0 +1,4 @@
+START RequestId: db09850f-2db3-4fcb-b82c-030e996d8057 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"db09850f-2db3-4fcb-b82c-030e996d8057","workload":"io","coldStart":false,"memoryMb":2048,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":29.043748,"jsonMs":null,"cpuMs":0.083001,"handlerMs":29.127922}
+END RequestId: db09850f-2db3-4fcb-b82c-030e996d8057
+REPORT RequestId: db09850f-2db3-4fcb-b82c-030e996d8057	Duration: 30.34 ms	Billed Duration: 31 ms	Memory Size: 2048 MB	Max Memory Used: 128 MB	

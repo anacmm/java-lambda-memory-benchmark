@@ -1,0 +1,4 @@
+START RequestId: ee3ed1da-c4ab-4ccf-a221-e240dd442ecb Version: $LATEST
+{"event":"benchmark_invocation","requestId":"ee3ed1da-c4ab-4ccf-a221-e240dd442ecb","workload":"cpu","coldStart":false,"memoryMb":1024,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":37.554837,"jsonMs":3.11468,"cpuMs":156.326976,"handlerMs":196.998258}
+END RequestId: ee3ed1da-c4ab-4ccf-a221-e240dd442ecb
+REPORT RequestId: ee3ed1da-c4ab-4ccf-a221-e240dd442ecb	Duration: 217.54 ms	Billed Duration: 218 ms	Memory Size: 1024 MB	Max Memory Used: 127 MB	

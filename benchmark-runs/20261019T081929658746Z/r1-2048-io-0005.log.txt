@@ -1,0 +1,4 @@
+START RequestId: 82164adf-013e-4400-ab28-249dde69eb60 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"82164adf-013e-4400-ab28-249dde69eb60","workload":"io","coldStart":false,"memoryMb":2048,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":28.086662,"jsonMs":null,"cpuMs":0.08104,"handlerMs":28.168868}
+END RequestId: 82164adf-013e-4400-ab28-249dde69eb60
+REPORT RequestId: 82164adf-013e-4400-ab28-249dde69eb60	Duration: 29.22 ms	Billed Duration: 30 ms	Memory Size: 2048 MB	Max Memory Used: 126 MB	

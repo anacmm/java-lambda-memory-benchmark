@@ -1,0 +1,4 @@
+START RequestId: cededcfe-2564-412d-a458-bcc5445fd1ad Version: $LATEST
+{"event":"benchmark_invocation","requestId":"cededcfe-2564-412d-a458-bcc5445fd1ad","workload":"cpu","coldStart":false,"memoryMb":1536,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":31.176352,"jsonMs":2.931142,"cpuMs":105.955262,"handlerMs":140.064562}
+END RequestId: cededcfe-2564-412d-a458-bcc5445fd1ad
+REPORT RequestId: cededcfe-2564-412d-a458-bcc5445fd1ad	Duration: 141.29 ms	Billed Duration: 142 ms	Memory Size: 1536 MB	Max Memory Used: 119 MB	

@@ -1,0 +1,4 @@
+START RequestId: 49728bac-57fa-4d98-9ed2-009126662265 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"49728bac-57fa-4d98-9ed2-009126662265","workload":"cpu","coldStart":false,"memoryMb":3072,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":20.971892,"jsonMs":3.77857,"cpuMs":75.795949,"handlerMs":100.548271}
+END RequestId: 49728bac-57fa-4d98-9ed2-009126662265
+REPORT RequestId: 49728bac-57fa-4d98-9ed2-009126662265	Duration: 101.96 ms	Billed Duration: 102 ms	Memory Size: 3072 MB	Max Memory Used: 124 MB	

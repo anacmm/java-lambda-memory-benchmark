@@ -1,0 +1,4 @@
+START RequestId: 72702fc6-35c1-4bdc-b242-bbcfa41e9ae7 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"72702fc6-35c1-4bdc-b242-bbcfa41e9ae7","workload":"cpu","coldStart":false,"memoryMb":2048,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":26.073129,"jsonMs":2.826394,"cpuMs":85.831366,"handlerMs":114.732822}
+END RequestId: 72702fc6-35c1-4bdc-b242-bbcfa41e9ae7
+REPORT RequestId: 72702fc6-35c1-4bdc-b242-bbcfa41e9ae7	Duration: 115.89 ms	Billed Duration: 116 ms	Memory Size: 2048 MB	Max Memory Used: 120 MB	

@@ -1,0 +1,4 @@
+START RequestId: cd858fab-8cc0-4874-9413-4fe4a26b1525 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"cd858fab-8cc0-4874-9413-4fe4a26b1525","workload":"cpu","coldStart":false,"memoryMb":2048,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":30.493078,"jsonMs":2.954917,"cpuMs":85.878223,"handlerMs":119.327596}
+END RequestId: cd858fab-8cc0-4874-9413-4fe4a26b1525
+REPORT RequestId: cd858fab-8cc0-4874-9413-4fe4a26b1525	Duration: 126.06 ms	Billed Duration: 127 ms	Memory Size: 2048 MB	Max Memory Used: 118 MB	

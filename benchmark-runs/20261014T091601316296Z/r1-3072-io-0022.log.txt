@@ -1,0 +1,4 @@
+START RequestId: cd270c68-cf95-4790-b111-70f14748284a Version: $LATEST
+{"event":"benchmark_invocation","requestId":"cd270c68-cf95-4790-b111-70f14748284a","workload":"io","coldStart":false,"memoryMb":3072,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":38.067925,"jsonMs":null,"cpuMs":0.082799,"handlerMs":38.15208}
+END RequestId: cd270c68-cf95-4790-b111-70f14748284a
+REPORT RequestId: cd270c68-cf95-4790-b111-70f14748284a	Duration: 39.35 ms	Billed Duration: 40 ms	Memory Size: 3072 MB	Max Memory Used: 130 MB	

@@ -1,0 +1,4 @@
+START RequestId: bade8125-a306-48b7-a693-2a00c43744e9 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"bade8125-a306-48b7-a693-2a00c43744e9","workload":"io","coldStart":false,"memoryMb":1024,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":13.68875,"jsonMs":null,"cpuMs":0.134125,"handlerMs":13.829333}
+END RequestId: bade8125-a306-48b7-a693-2a00c43744e9
+REPORT RequestId: bade8125-a306-48b7-a693-2a00c43744e9	Duration: 17.18 ms	Billed Duration: 18 ms	Memory Size: 1024 MB	Max Memory Used: 1024 MB	

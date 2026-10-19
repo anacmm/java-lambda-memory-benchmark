@@ -1,0 +1,4 @@
+START RequestId: edfc27b5-9087-4e6a-ac55-17a37267c4ad Version: $LATEST
+{"event":"benchmark_invocation","requestId":"edfc27b5-9087-4e6a-ac55-17a37267c4ad","workload":"cpu","coldStart":false,"memoryMb":512,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":35.632993,"jsonMs":3.853134,"cpuMs":316.589605,"handlerMs":356.077485}
+END RequestId: edfc27b5-9087-4e6a-ac55-17a37267c4ad
+REPORT RequestId: edfc27b5-9087-4e6a-ac55-17a37267c4ad	Duration: 373.87 ms	Billed Duration: 374 ms	Memory Size: 512 MB	Max Memory Used: 91 MB	

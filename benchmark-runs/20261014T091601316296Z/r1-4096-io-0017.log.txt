@@ -1,0 +1,4 @@
+START RequestId: ce70059d-ccc0-4c49-bb4d-e09c8d105009 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"ce70059d-ccc0-4c49-bb4d-e09c8d105009","workload":"io","coldStart":false,"memoryMb":4096,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":22.028172,"jsonMs":null,"cpuMs":0.082439,"handlerMs":22.111814}
+END RequestId: ce70059d-ccc0-4c49-bb4d-e09c8d105009
+REPORT RequestId: ce70059d-ccc0-4c49-bb4d-e09c8d105009	Duration: 23.32 ms	Billed Duration: 24 ms	Memory Size: 4096 MB	Max Memory Used: 130 MB	

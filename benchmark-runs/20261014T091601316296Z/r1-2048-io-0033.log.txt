@@ -1,0 +1,4 @@
+START RequestId: ec822970-b546-4994-baca-0c883a5cd5ba Version: $LATEST
+{"event":"benchmark_invocation","requestId":"ec822970-b546-4994-baca-0c883a5cd5ba","workload":"io","coldStart":false,"memoryMb":2048,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":33.192037,"jsonMs":null,"cpuMs":0.08197,"handlerMs":33.275132}
+END RequestId: ec822970-b546-4994-baca-0c883a5cd5ba
+REPORT RequestId: ec822970-b546-4994-baca-0c883a5cd5ba	Duration: 34.37 ms	Billed Duration: 35 ms	Memory Size: 2048 MB	Max Memory Used: 134 MB	

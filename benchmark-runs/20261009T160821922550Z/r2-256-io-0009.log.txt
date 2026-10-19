@@ -1,0 +1,4 @@
+START RequestId: cd5fea17-dbee-41f3-a2d1-b41407602787 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"cd5fea17-dbee-41f3-a2d1-b41407602787","workload":"io","coldStart":false,"memoryMb":256,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":35.245087,"jsonMs":null,"cpuMs":0.125284,"handlerMs":35.371438}
+END RequestId: cd5fea17-dbee-41f3-a2d1-b41407602787
+REPORT RequestId: cd5fea17-dbee-41f3-a2d1-b41407602787	Duration: 59.93 ms	Billed Duration: 60 ms	Memory Size: 256 MB	Max Memory Used: 87 MB	

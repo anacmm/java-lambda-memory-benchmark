@@ -1,0 +1,4 @@
+START RequestId: c837dff2-d543-443d-9661-ef1121972f30 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"c837dff2-d543-443d-9661-ef1121972f30","workload":"cpu","coldStart":false,"memoryMb":2048,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":34.157525,"jsonMs":3.826491,"cpuMs":86.070648,"handlerMs":124.05647}
+END RequestId: c837dff2-d543-443d-9661-ef1121972f30
+REPORT RequestId: c837dff2-d543-443d-9661-ef1121972f30	Duration: 125.28 ms	Billed Duration: 126 ms	Memory Size: 2048 MB	Max Memory Used: 105 MB	

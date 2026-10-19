@@ -1,0 +1,4 @@
+START RequestId: 4a3177b9-df84-4944-baba-cc4dcf380bda Version: $LATEST
+{"event":"benchmark_invocation","requestId":"4a3177b9-df84-4944-baba-cc4dcf380bda","workload":"cpu","coldStart":false,"memoryMb":2048,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":31.07726,"jsonMs":2.862546,"cpuMs":85.875796,"handlerMs":119.817203}
+END RequestId: 4a3177b9-df84-4944-baba-cc4dcf380bda
+REPORT RequestId: 4a3177b9-df84-4944-baba-cc4dcf380bda	Duration: 121.00 ms	Billed Duration: 122 ms	Memory Size: 2048 MB	Max Memory Used: 122 MB	

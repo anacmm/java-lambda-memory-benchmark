@@ -1,0 +1,4 @@
+START RequestId: cd59aedc-efa2-4c25-b156-5d072b2abed5 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"cd59aedc-efa2-4c25-b156-5d072b2abed5","workload":"cpu","coldStart":false,"memoryMb":2048,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":31.357234,"jsonMs":3.751638,"cpuMs":85.821992,"handlerMs":120.932511}
+END RequestId: cd59aedc-efa2-4c25-b156-5d072b2abed5
+REPORT RequestId: cd59aedc-efa2-4c25-b156-5d072b2abed5	Duration: 122.38 ms	Billed Duration: 123 ms	Memory Size: 2048 MB	Max Memory Used: 95 MB	

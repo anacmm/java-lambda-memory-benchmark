@@ -1,0 +1,4 @@
+START RequestId: ecabf66a-a116-4d33-86f2-f320bd23d123 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"ecabf66a-a116-4d33-86f2-f320bd23d123","workload":"io","coldStart":false,"memoryMb":1024,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":32.938412,"jsonMs":null,"cpuMs":0.125481,"handlerMs":33.064845}
+END RequestId: ecabf66a-a116-4d33-86f2-f320bd23d123
+REPORT RequestId: ecabf66a-a116-4d33-86f2-f320bd23d123	Duration: 34.41 ms	Billed Duration: 35 ms	Memory Size: 1024 MB	Max Memory Used: 110 MB	

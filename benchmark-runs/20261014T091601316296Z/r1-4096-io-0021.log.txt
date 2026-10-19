@@ -1,0 +1,4 @@
+START RequestId: f844fb10-dda2-4e05-abc1-050564a62257 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"f844fb10-dda2-4e05-abc1-050564a62257","workload":"io","coldStart":false,"memoryMb":4096,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":28.992007,"jsonMs":null,"cpuMs":0.082861,"handlerMs":29.07627}
+END RequestId: f844fb10-dda2-4e05-abc1-050564a62257
+REPORT RequestId: f844fb10-dda2-4e05-abc1-050564a62257	Duration: 30.28 ms	Billed Duration: 31 ms	Memory Size: 4096 MB	Max Memory Used: 130 MB	

@@ -1,0 +1,4 @@
+START RequestId: b8cb9519-c264-4316-b389-5dfe7d375173 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"b8cb9519-c264-4316-b389-5dfe7d375173","workload":"io","coldStart":false,"memoryMb":3072,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":34.634765,"jsonMs":null,"cpuMs":0.082345,"handlerMs":34.718124}
+END RequestId: b8cb9519-c264-4316-b389-5dfe7d375173
+REPORT RequestId: b8cb9519-c264-4316-b389-5dfe7d375173	Duration: 35.85 ms	Billed Duration: 36 ms	Memory Size: 3072 MB	Max Memory Used: 129 MB	

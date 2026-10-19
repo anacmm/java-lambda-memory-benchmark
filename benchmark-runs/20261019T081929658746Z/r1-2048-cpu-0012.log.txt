@@ -1,0 +1,4 @@
+START RequestId: 075c6009-dd03-485f-8283-1140d949d0e9 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"075c6009-dd03-485f-8283-1140d949d0e9","workload":"cpu","coldStart":false,"memoryMb":2048,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":33.522296,"jsonMs":4.503399,"cpuMs":85.804476,"handlerMs":123.831814}
+END RequestId: 075c6009-dd03-485f-8283-1140d949d0e9
+REPORT RequestId: 075c6009-dd03-485f-8283-1140d949d0e9	Duration: 134.03 ms	Billed Duration: 135 ms	Memory Size: 2048 MB	Max Memory Used: 110 MB	

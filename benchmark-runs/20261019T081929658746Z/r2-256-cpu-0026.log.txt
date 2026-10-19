@@ -1,0 +1,4 @@
+START RequestId: cea2141f-7251-4e93-a70d-8ecefd251935 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"cea2141f-7251-4e93-a70d-8ecefd251935","workload":"cpu","coldStart":false,"memoryMb":256,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":39.574018,"jsonMs":2.859453,"cpuMs":610.431962,"handlerMs":652.867441}
+END RequestId: cea2141f-7251-4e93-a70d-8ecefd251935
+REPORT RequestId: cea2141f-7251-4e93-a70d-8ecefd251935	Duration: 724.30 ms	Billed Duration: 725 ms	Memory Size: 256 MB	Max Memory Used: 119 MB	

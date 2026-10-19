@@ -1,0 +1,4 @@
+START RequestId: dea21a30-08dc-404f-9d0b-f77149c36619 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"dea21a30-08dc-404f-9d0b-f77149c36619","workload":"io","coldStart":false,"memoryMb":1536,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":33.468227,"jsonMs":null,"cpuMs":0.082814,"handlerMs":33.552501}
+END RequestId: dea21a30-08dc-404f-9d0b-f77149c36619
+REPORT RequestId: dea21a30-08dc-404f-9d0b-f77149c36619	Duration: 34.86 ms	Billed Duration: 35 ms	Memory Size: 1536 MB	Max Memory Used: 125 MB	

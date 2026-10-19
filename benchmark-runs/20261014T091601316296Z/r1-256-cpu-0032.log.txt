@@ -1,0 +1,4 @@
+START RequestId: deec13b7-4323-4088-b446-478c05fdb005 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"deec13b7-4323-4088-b446-478c05fdb005","workload":"cpu","coldStart":false,"memoryMb":256,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":34.246999,"jsonMs":1.710764,"cpuMs":571.311372,"handlerMs":607.27093}
+END RequestId: deec13b7-4323-4088-b446-478c05fdb005
+REPORT RequestId: deec13b7-4323-4088-b446-478c05fdb005	Duration: 661.61 ms	Billed Duration: 662 ms	Memory Size: 256 MB	Max Memory Used: 118 MB	

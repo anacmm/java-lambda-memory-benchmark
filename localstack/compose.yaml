@@ -1,0 +1,26 @@
+name: java-benchmark-local
+
+services:
+  localstack:
+    image: localstack/localstack:2026.09.0@sha256:801a3dff7f6a23857e7310b7602e67d52a29dfdcb03e09f7c608d5c57d24b792
+    platform: linux/arm64
+    ports:
+      - "127.0.0.1:4566:4566"
+    environment:
+      LOCALSTACK_AUTH_TOKEN: ${LOCALSTACK_AUTH_TOKEN:?Set LOCALSTACK_AUTH_TOKEN in your terminal or localstack/.env}
+      SERVICES: s3,lambda
+      LAMBDA_DOCKER_NETWORK: java-benchmark-local
+      PERSISTENCE: "0"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - local
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:4566/_localstack/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+
+networks:
+  local:
+    name: java-benchmark-local

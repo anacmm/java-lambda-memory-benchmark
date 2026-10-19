@@ -1,0 +1,4 @@
+START RequestId: 7ecd90ca-90f0-4e73-a425-077a0aba4650 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"7ecd90ca-90f0-4e73-a425-077a0aba4650","workload":"cpu","coldStart":false,"memoryMb":512,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":36.672981,"jsonMs":2.952183,"cpuMs":326.135131,"handlerMs":365.761897}
+END RequestId: 7ecd90ca-90f0-4e73-a425-077a0aba4650
+REPORT RequestId: 7ecd90ca-90f0-4e73-a425-077a0aba4650	Duration: 367.22 ms	Billed Duration: 368 ms	Memory Size: 512 MB	Max Memory Used: 123 MB	

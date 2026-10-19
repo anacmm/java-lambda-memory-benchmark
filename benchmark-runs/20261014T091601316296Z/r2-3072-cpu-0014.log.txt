@@ -1,0 +1,4 @@
+START RequestId: c715ab63-e6af-44ee-957c-12ad4bb2019b Version: $LATEST
+{"event":"benchmark_invocation","requestId":"c715ab63-e6af-44ee-957c-12ad4bb2019b","workload":"cpu","coldStart":false,"memoryMb":3072,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":21.371227,"jsonMs":3.254067,"cpuMs":75.81905,"handlerMs":100.445959}
+END RequestId: c715ab63-e6af-44ee-957c-12ad4bb2019b
+REPORT RequestId: c715ab63-e6af-44ee-957c-12ad4bb2019b	Duration: 101.77 ms	Billed Duration: 102 ms	Memory Size: 3072 MB	Max Memory Used: 121 MB	

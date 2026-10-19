@@ -1,0 +1,4 @@
+START RequestId: fbdda115-cfe8-463a-8905-e19a8262cfa4 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"fbdda115-cfe8-463a-8905-e19a8262cfa4","workload":"io","coldStart":false,"memoryMb":1024,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":33.790713,"jsonMs":null,"cpuMs":0.082976,"handlerMs":33.874842}
+END RequestId: fbdda115-cfe8-463a-8905-e19a8262cfa4
+REPORT RequestId: fbdda115-cfe8-463a-8905-e19a8262cfa4	Duration: 35.26 ms	Billed Duration: 36 ms	Memory Size: 1024 MB	Max Memory Used: 132 MB	

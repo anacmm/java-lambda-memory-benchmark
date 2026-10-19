@@ -1,0 +1,4 @@
+START RequestId: acc7fb3b-1c34-4f88-a212-99fdb0b98aff Version: $LATEST
+{"event":"benchmark_invocation","requestId":"acc7fb3b-1c34-4f88-a212-99fdb0b98aff","workload":"cpu","coldStart":false,"memoryMb":2048,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":34.530787,"jsonMs":3.320662,"cpuMs":86.245339,"handlerMs":124.098491}
+END RequestId: acc7fb3b-1c34-4f88-a212-99fdb0b98aff
+REPORT RequestId: acc7fb3b-1c34-4f88-a212-99fdb0b98aff	Duration: 127.52 ms	Billed Duration: 128 ms	Memory Size: 2048 MB	Max Memory Used: 122 MB	

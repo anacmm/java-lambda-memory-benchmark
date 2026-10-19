@@ -1,0 +1,4 @@
+START RequestId: eabcfab1-1cea-491f-bf35-3405bce19f13 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"eabcfab1-1cea-491f-bf35-3405bce19f13","workload":"io","coldStart":false,"memoryMb":1024,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":6.781042,"jsonMs":null,"cpuMs":0.100292,"handlerMs":6.882459}
+END RequestId: eabcfab1-1cea-491f-bf35-3405bce19f13
+REPORT RequestId: eabcfab1-1cea-491f-bf35-3405bce19f13	Duration: 8.13 ms	Billed Duration: 9 ms	Memory Size: 1024 MB	Max Memory Used: 1024 MB	

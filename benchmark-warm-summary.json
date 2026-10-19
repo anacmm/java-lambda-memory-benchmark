@@ -1,0 +1,86 @@
+[
+  {
+    "memoryMb": 256,
+    "workload": "cpu",
+    "samples": 1,
+    "meanDurationMs": 771.44,
+    "meanBilledGBSeconds": 0.193
+  },
+  {
+    "memoryMb": 256,
+    "workload": "io",
+    "samples": 2,
+    "meanDurationMs": 110.52,
+    "meanBilledGBSeconds": 0.02775
+  },
+  {
+    "memoryMb": 512,
+    "workload": "cpu",
+    "samples": 1,
+    "meanDurationMs": 459.77,
+    "meanBilledGBSeconds": 0.23
+  },
+  {
+    "memoryMb": 512,
+    "workload": "io",
+    "samples": 2,
+    "meanDurationMs": 62.745,
+    "meanBilledGBSeconds": 0.0315
+  },
+  {
+    "memoryMb": 1024,
+    "workload": "cpu",
+    "samples": 1,
+    "meanDurationMs": 203.67,
+    "meanBilledGBSeconds": 0.204
+  },
+  {
+    "memoryMb": 1024,
+    "workload": "io",
+    "samples": 1,
+    "meanDurationMs": 41.75,
+    "meanBilledGBSeconds": 0.042
+  },
+  {
+    "memoryMb": 1536,
+    "workload": "cpu",
+    "samples": 1,
+    "meanDurationMs": 159.97,
+    "meanBilledGBSeconds": 0.24
+  },
+  {
+    "memoryMb": 1536,
+    "workload": "io",
+    "samples": 2,
+    "meanDurationMs": 39.58,
+    "meanBilledGBSeconds": 0.06075
+  },
+  {
+    "memoryMb": 2048,
+    "workload": "cpu",
+    "samples": 1,
+    "meanDurationMs": 139.47,
+    "meanBilledGBSeconds": 0.28
+  },
+  {
+    "memoryMb": 2048,
+    "workload": "io",
+    "samples": 2,
+    "meanDurationMs": 38.625,
+    "meanBilledGBSeconds": 0.078
+  },
+  {
+    "memoryMb": 3072,
+    "workload": "cpu",
+    "samples": 1,
+    "meanDurationMs": 125.89,
+    "meanBilledGBSeconds": 0.378
+  },
+  {
+    "memoryMb": 3072,
+    "workload": "io",
+    "samples": 2,
+    "meanDurationMs": 41.46,
+    "meanBilledGBSeconds": 0.126
+  }
+]

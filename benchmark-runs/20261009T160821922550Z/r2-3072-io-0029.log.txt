@@ -1,0 +1,4 @@
+START RequestId: c5096ca9-14cc-44d0-88d1-32730d106e7d Version: $LATEST
+{"event":"benchmark_invocation","requestId":"c5096ca9-14cc-44d0-88d1-32730d106e7d","workload":"io","coldStart":false,"memoryMb":3072,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":51.589446,"jsonMs":null,"cpuMs":0.087433,"handlerMs":51.678288}
+END RequestId: c5096ca9-14cc-44d0-88d1-32730d106e7d
+REPORT RequestId: c5096ca9-14cc-44d0-88d1-32730d106e7d	Duration: 53.57 ms	Billed Duration: 54 ms	Memory Size: 3072 MB	Max Memory Used: 111 MB	

@@ -1,0 +1,4 @@
+START RequestId: afc2067e-31f1-473f-ba7e-f60f13fd3710 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"afc2067e-31f1-473f-ba7e-f60f13fd3710","workload":"cpu","coldStart":false,"memoryMb":2048,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":25.710216,"jsonMs":2.887568,"cpuMs":85.849678,"handlerMs":114.449432}
+END RequestId: afc2067e-31f1-473f-ba7e-f60f13fd3710
+REPORT RequestId: afc2067e-31f1-473f-ba7e-f60f13fd3710	Duration: 115.70 ms	Billed Duration: 116 ms	Memory Size: 2048 MB	Max Memory Used: 125 MB	

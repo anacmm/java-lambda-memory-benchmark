@@ -1,0 +1,4 @@
+START RequestId: eaf02965-adcb-48fc-9c36-bf90b89e10d4 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"eaf02965-adcb-48fc-9c36-bf90b89e10d4","workload":"io","coldStart":false,"memoryMb":3072,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":27.737051,"jsonMs":null,"cpuMs":0.082565,"handlerMs":27.820844}
+END RequestId: eaf02965-adcb-48fc-9c36-bf90b89e10d4
+REPORT RequestId: eaf02965-adcb-48fc-9c36-bf90b89e10d4	Duration: 29.13 ms	Billed Duration: 30 ms	Memory Size: 3072 MB	Max Memory Used: 95 MB	

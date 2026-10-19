@@ -1,0 +1,4 @@
+START RequestId: cdc507bb-8d52-46c7-a548-f535417dfd44 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"cdc507bb-8d52-46c7-a548-f535417dfd44","workload":"io","coldStart":false,"memoryMb":256,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":28.805641,"jsonMs":null,"cpuMs":0.083166,"handlerMs":28.89043}
+END RequestId: cdc507bb-8d52-46c7-a548-f535417dfd44
+REPORT RequestId: cdc507bb-8d52-46c7-a548-f535417dfd44	Duration: 61.03 ms	Billed Duration: 62 ms	Memory Size: 256 MB	Max Memory Used: 91 MB	

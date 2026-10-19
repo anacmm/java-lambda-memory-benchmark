@@ -1,0 +1,4 @@
+START RequestId: dbab1a1c-15d6-4671-894c-0dfb96af0dc3 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"dbab1a1c-15d6-4671-894c-0dfb96af0dc3","workload":"cpu","coldStart":false,"memoryMb":512,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":35.868759,"jsonMs":4.949456,"cpuMs":365.950515,"handlerMs":406.770248}
+END RequestId: dbab1a1c-15d6-4671-894c-0dfb96af0dc3
+REPORT RequestId: dbab1a1c-15d6-4671-894c-0dfb96af0dc3	Duration: 422.48 ms	Billed Duration: 423 ms	Memory Size: 512 MB	Max Memory Used: 99 MB	

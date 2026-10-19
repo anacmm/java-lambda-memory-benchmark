@@ -1,0 +1,4 @@
+START RequestId: fa1203da-d3d1-445d-8650-b6364cd0dbe8 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"fa1203da-d3d1-445d-8650-b6364cd0dbe8","workload":"cpu","coldStart":false,"memoryMb":512,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":41.646176,"jsonMs":3.936909,"cpuMs":317.565784,"handlerMs":363.150764}
+END RequestId: fa1203da-d3d1-445d-8650-b6364cd0dbe8
+REPORT RequestId: fa1203da-d3d1-445d-8650-b6364cd0dbe8	Duration: 378.20 ms	Billed Duration: 379 ms	Memory Size: 512 MB	Max Memory Used: 101 MB	

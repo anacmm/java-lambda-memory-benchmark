@@ -1,0 +1,4 @@
+START RequestId: fcf270a1-23db-4087-8776-fa23b6d16a7e Version: $LATEST
+{"event":"benchmark_invocation","requestId":"fcf270a1-23db-4087-8776-fa23b6d16a7e","workload":"cpu","coldStart":false,"memoryMb":512,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":30.778712,"jsonMs":2.909518,"cpuMs":285.955634,"handlerMs":319.645542}
+END RequestId: fcf270a1-23db-4087-8776-fa23b6d16a7e
+REPORT RequestId: fcf270a1-23db-4087-8776-fa23b6d16a7e	Duration: 353.43 ms	Billed Duration: 354 ms	Memory Size: 512 MB	Max Memory Used: 121 MB	

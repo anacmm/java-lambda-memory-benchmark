@@ -1,0 +1,11 @@
+__  ____  __  _____   ___  __ ____  ______ 
+--/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+-/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+2026-10-09 16:08:26,609 INFO  [io.quarkus] (main) lambda 1.0.0-SNAPSHOT native (powered by Quarkus 3.27.6) started in 0.081s. 
+2026-10-09 16:08:26,609 INFO  [io.quarkus] (main) Profile prod activated. 
+2026-10-09 16:08:26,609 INFO  [io.quarkus] (main) Installed features: [amazon-lambda, amazon-sdk-s3, cdi]
+START RequestId: 74b1f2f6-8565-4148-bad7-ddd00b8f5d91 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"74b1f2f6-8565-4148-bad7-ddd00b8f5d91","workload":"cpu","coldStart":true,"memoryMb":256,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":600.261272,"jsonMs":82.701374,"cpuMs":636.108802,"handlerMs":1319.073506}
+END RequestId: 74b1f2f6-8565-4148-bad7-ddd00b8f5d91
+REPORT RequestId: 74b1f2f6-8565-4148-bad7-ddd00b8f5d91	Duration: 1403.02 ms	Billed Duration: 1635 ms	Memory Size: 256 MB	Max Memory Used: 80 MB	Init Duration: 231.26 ms	

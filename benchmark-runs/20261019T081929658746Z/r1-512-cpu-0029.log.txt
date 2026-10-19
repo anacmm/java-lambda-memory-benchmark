@@ -1,0 +1,4 @@
+START RequestId: acf30f3e-e634-456b-9165-adf25a3b31d3 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"acf30f3e-e634-456b-9165-adf25a3b31d3","workload":"cpu","coldStart":false,"memoryMb":512,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":28.587757,"jsonMs":2.885785,"cpuMs":316.639284,"handlerMs":348.114423}
+END RequestId: acf30f3e-e634-456b-9165-adf25a3b31d3
+REPORT RequestId: acf30f3e-e634-456b-9165-adf25a3b31d3	Duration: 364.70 ms	Billed Duration: 365 ms	Memory Size: 512 MB	Max Memory Used: 118 MB	

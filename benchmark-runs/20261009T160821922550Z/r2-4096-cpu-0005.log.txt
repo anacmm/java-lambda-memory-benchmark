@@ -1,0 +1,4 @@
+START RequestId: de235a2a-d386-4b69-9d24-68ae94981471 Version: $LATEST
+{"event":"benchmark_invocation","requestId":"de235a2a-d386-4b69-9d24-68ae94981471","workload":"cpu","coldStart":false,"memoryMb":4096,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":28.516289,"jsonMs":2.81665,"cpuMs":75.790767,"handlerMs":107.124943}
+END RequestId: de235a2a-d386-4b69-9d24-68ae94981471
+REPORT RequestId: de235a2a-d386-4b69-9d24-68ae94981471	Duration: 108.25 ms	Billed Duration: 109 ms	Memory Size: 4096 MB	Max Memory Used: 117 MB	

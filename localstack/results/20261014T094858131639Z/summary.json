@@ -1,0 +1,60 @@
+{
+  "environment": "localstack",
+  "stopReason": "Completed",
+  "expectedInvocations": 24,
+  "recordedInvocations": 24,
+  "valid": 24,
+  "cleanupErrors": [],
+  "workloads": [
+    {
+      "workload": "cpu",
+      "warmCollected": 10,
+      "coldCollected": 0,
+      "s3Ms": {
+        "mean": 7.043346099999999,
+        "p50": 5.93825,
+        "p95": 16.228084
+      },
+      "cpuMs": {
+        "mean": 76.2382709,
+        "p50": 75.265125,
+        "p95": 85.245917
+      },
+      "handlerMs": {
+        "mean": 85.7329208,
+        "p50": 85.899625,
+        "p95": 93.535583
+      },
+      "callerMs": {
+        "mean": 381.00114570024743,
+        "p50": 372.9650830009632,
+        "p95": 414.2061669990653
+      }
+    },
+    {
+      "workload": "io",
+      "warmCollected": 10,
+      "coldCollected": 0,
+      "s3Ms": {
+        "mean": 10.341983500000001,
+        "p50": 6.781042,
+        "p95": 28.32825
+      },
+      "cpuMs": {
+        "mean": 0.09680849999999999,
+        "p50": 0.088959,
+        "p95": 0.151417
+      },
+      "handlerMs": {
+        "mean": 10.4434376,
+        "p50": 6.882459,
+        "p95": 28.495416
+      },
+      "callerMs": {
+        "mean": 490.0779040002817,
+        "p50": 299.18220800027484,
+        "p95": 1058.970624999347
+      }
+    }
+  ]
+}

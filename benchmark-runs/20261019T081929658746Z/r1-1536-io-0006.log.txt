@@ -1,0 +1,4 @@
+START RequestId: 80779bee-75fc-45b3-ab13-cd87318f682a Version: $LATEST
+{"event":"benchmark_invocation","requestId":"80779bee-75fc-45b3-ab13-cd87318f682a","workload":"io","coldStart":false,"memoryMb":1536,"status":"OK","recordsProcessed":null,"datasetBytes":191961,"objectBytes":191961,"checksum":"crc32:1c396adb","errorType":null,"s3Ms":37.042888,"jsonMs":null,"cpuMs":0.126063,"handlerMs":37.170379}
+END RequestId: 80779bee-75fc-45b3-ab13-cd87318f682a
+REPORT RequestId: 80779bee-75fc-45b3-ab13-cd87318f682a	Duration: 38.44 ms	Billed Duration: 39 ms	Memory Size: 1536 MB	Max Memory Used: 130 MB	

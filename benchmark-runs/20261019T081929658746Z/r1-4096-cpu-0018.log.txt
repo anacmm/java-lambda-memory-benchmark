@@ -1,0 +1,4 @@
+START RequestId: b7180072-ac25-45e0-9a63-239677b8612a Version: $LATEST
+{"event":"benchmark_invocation","requestId":"b7180072-ac25-45e0-9a63-239677b8612a","workload":"cpu","coldStart":false,"memoryMb":4096,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":34.240065,"jsonMs":2.843081,"cpuMs":75.801951,"handlerMs":112.886882}
+END RequestId: b7180072-ac25-45e0-9a63-239677b8612a
+REPORT RequestId: b7180072-ac25-45e0-9a63-239677b8612a	Duration: 114.13 ms	Billed Duration: 115 ms	Memory Size: 4096 MB	Max Memory Used: 118 MB	

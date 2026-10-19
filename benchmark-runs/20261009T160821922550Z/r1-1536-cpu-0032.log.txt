@@ -1,0 +1,4 @@
+START RequestId: 9424cf2b-60c2-41d2-982d-283d122acb7b Version: $LATEST
+{"event":"benchmark_invocation","requestId":"9424cf2b-60c2-41d2-982d-283d122acb7b","workload":"cpu","coldStart":false,"memoryMb":1536,"status":"OK","recordsProcessed":4000,"datasetBytes":191961,"objectBytes":191961,"checksum":"b1e029a3d2d7974c","errorType":null,"s3Ms":32.174965,"jsonMs":2.853703,"cpuMs":105.831079,"handlerMs":140.861391}
+END RequestId: 9424cf2b-60c2-41d2-982d-283d122acb7b
+REPORT RequestId: 9424cf2b-60c2-41d2-982d-283d122acb7b	Duration: 142.20 ms	Billed Duration: 143 ms	Memory Size: 1536 MB	Max Memory Used: 122 MB	

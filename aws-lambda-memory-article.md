@@ -1,30 +1,14 @@
 # How Much Memory Does a Java Lambda Really Need?
 
-## CPU vs I/O on AWS Lambda
+## CPU-heavy vs S3-heavy workloads on AWS Lambda
 
-> **Status:** Working draft, updated 19 October 2026. Three complete AWS benchmark runs and two LocalStack runs are available; pricing analysis and final production recommendations are pending.
+> **Evidence status (22 October 2026):** Three complete AWS benchmark runs (9, 14 and 19 October) and two LocalStack experiments (14 and 19 October). The findings below concern warm execution and billed Lambda compute consumption; they are not a full pricing analysis or universal production-sizing recommendation.
 
 ## Why I started this
 
-This experiment started after AWS Community Summit Manchester 2026.
+Attending AWS Community Summit Birmingham and Manchester in 2026 left me wanting to build something practical. The enthusiasm of [🐔 Guilherme Dalla Rosa](https://www.linkedin.com/in/guidr/), [Matheus das Mercês](https://www.linkedin.com/search/results/people/?keywords=Matheus%20das%20Merc%C3%AAs), [Robin Ford](https://www.linkedin.com/search/results/people/?keywords=Robin%20Ford%20AWS%20Accenture) and [Yan Cui](https://www.linkedin.com/search/results/people/?keywords=Yan%20Cui%20AWS) was particularly infectious. It encouraged me to revisit [Johannes Geiger](https://www.linkedin.com/search/results/people/?keywords=Johannes%20Geiger%20AWS)'s [*AWS Lambdas with Java, revisited*](https://medium.com/@johannesfloriangeiger/aws-lambdas-with-java-revisited-f74e7ed214d5) and ask a slightly different question: **how much memory does a Java Lambda actually need for different workloads?**
 
-I came away from the event wanting to turn some of that inspiration into
-something practical of my own. In particular, conversations and talks
-from Guilherme Dalla Rosa and Matheus das Mercês gave me the push to
-create a talk rather than simply collect notes from the event.
-
-When I started looking for a Java-focused idea, I went back to Johannes
-Geiger's article *AWS Lambdas with Java, revisited*. His comparison of
-different ways of running Java on Lambda, including native Quarkus, gave
-me a useful starting point.
-
-But I did not want to repeat the same benchmark.
-
-So I went back to AWS guidance around Lambda performance and cost
-optimisation and ended up with a deceptively simple question:
-
-> **How much memory does a Java Lambda really need, and does the answer
-> depend on what the Lambda actually does?**
+Johannes compared ways to run Java on Lambda, including native Quarkus. I wanted to keep the deployment model fixed and explore a different variable: the memory configuration, tested against two distinct workloads.
 
 That became the experiment.
 
@@ -173,9 +157,7 @@ duration where applicable and maximum memory used.
 The final comparison will consider:
 
 -   mean/median duration
--   p50
--   p95
--   p99, with appropriate caution about sample size
+-   p50 / p95 / p99 (with appropriate caution about sample size)
 -   billed duration
 -   GB-seconds
 -   estimated Lambda compute cost
@@ -250,8 +232,6 @@ That keeps the main question focused:
 ------------------------------------------------------------------------
 
 ## What do I expect?
-
-I have deliberately not written a conclusion yet.
 
 A reasonable expectation is that the CPU-heavy workload may continue
 benefiting from additional Lambda memory for longer because additional
@@ -457,26 +437,28 @@ The new local metadata was equally useful: the application reported 1024 MB whil
 
 # Conclusion
 
-**Final conclusion not written yet.**
+The results support **workload-dependent Lambda memory sizing**, but not a universal memory recommendation.
 
-The final conclusion should be based on the measured results rather than
-the original hypothesis.
+The CPU-heavy path benefited substantially from increasing memory, with mean warm AWS REPORT duration falling sharply from 256 MB to 3072 MB and then levelling off. The S3-heavy path reached diminishing returns much earlier, around 1024 MB. For a small-object S3 read, additional allocated compute did not consistently shorten the external-service-dominated part of the request.
 
-Potential questions for the conclusion:
+The cost result was less straightforward. Increasing the CPU workload from 1024 to 1536 MB reduced mean duration on all three AWS days, but reduced billed GB-seconds only on 9 October. The 14 and 19 October runs instead recorded increases of 9.5% and 23.9%. Across the tested configurations, 256 MB consumed the fewest mean billed GB-seconds for both workloads, at the expense of substantially higher latency. **The fastest configuration was not necessarily the cheapest, and one promising run was not sufficient evidence of a repeatable saving.**
 
--   Is there such a thing as a sensible default Lambda memory
-    configuration?
--   How much does workload type matter?
--   When is additional memory worth paying for?
--   What can developers determine locally?
--   What must be measured in AWS?
--   What would I change if I repeated the experiment?
+LocalStack added a different kind of confidence. The unchanged native ARM64 application and dataset produced matching functional results locally, making it useful for checking the Lambda/S3 integration and correctness. But configured memory did not imply equivalent CPU and memory constraints, and local handler timings were not predictive of AWS latency. Performance and cost decisions still need measurements in AWS.
+
+**What I would do next:**
+
+- Define a realistic latency target and invocation volume before choosing a memory configuration.
+- Repeat promising memory settings across separate batches and days, retaining per-run variation instead of averaging away differences.
+- Calculate full workload cost using region-specific Lambda pricing, requests, S3 and logging, and account for cold-start frequency where relevant.
+- Test a larger or more varied dataset, and consider concurrency and controlled cold starts as separate experiments.
+
+**Practical takeaway:** Benchmark the actual workload against both latency requirements and billed compute. Use LocalStack to validate behaviour, and AWS to validate production performance. There is no universal Lambda memory winner.
 
 ------------------------------------------------------------------------
 
-## References to verify and link before publication
+## References and further reading
 
--   Johannes Geiger, *AWS Lambdas with Java, revisited*
+-   [Johannes Geiger, *AWS Lambdas with Java, revisited*](https://medium.com/@johannesfloriangeiger/aws-lambdas-with-java-revisited-f74e7ed214d5)
 -   AWS Lambda memory configuration documentation
 -   AWS Compute Blog, *Understanding techniques to reduce AWS Lambda
     costs in serverless applications*
@@ -489,5 +471,4 @@ Potential questions for the conclusion:
 -   Relevant Yan Cui material/discussion on local testing of serverless
     applications
 
-> **Publication note:** Verify URLs, current AWS pricing and all
-> quoted/attributed claims immediately before publishing.
+> **Scope note:** No total-dollar cost or final production memory optimum is claimed here. The LinkedIn people-search URLs above are search links, not verified individual profile URLs, except for Guilherme Dalla Rosa.

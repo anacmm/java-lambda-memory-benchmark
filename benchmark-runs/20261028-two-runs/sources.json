@@ -1,0 +1,26 @@
+[
+  {
+    "environment": "AWS",
+    "run": 1,
+    "root": "benchmark-runs/20261028T161357284345Z-full-matrix",
+    "validCalls": 1452
+  },
+  {
+    "environment": "AWS",
+    "run": 2,
+    "root": "benchmark-runs/20261028T164148001377Z-full-matrix",
+    "validCalls": 1452
+  },
+  {
+    "environment": "LocalStack",
+    "run": 1,
+    "root": "localstack/results/20261028T161400196810Z-full-matrix",
+    "validCalls": 1452
+  },
+  {
+    "environment": "LocalStack",
+    "run": 2,
+    "root": "localstack/results/20261028T164150478587Z-full-matrix",
+    "validCalls": 1452
+  }
+]

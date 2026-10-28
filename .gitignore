@@ -50,6 +50,30 @@ __pycache__/
 
 ### Private original deployment evidence (preserved locally) ###
 /benchmark-runs/*/metadata.json
+/benchmark-runs/*/batch-*/metadata.json
+/benchmark-runs/*-full-matrix/*.log
+/localstack/results/*-full-matrix/*.log
+/localstack/results/*-full-matrix/matrix-summary.json
 /benchmark-*-logs.txt
 /benchmark-reports.txt
 /benchmark-first-trial.tar.gz
+
+### Raw benchmark evidence (keep new runs local; publish summaries and graphs) ###
+/benchmark-runs/**/r[0-9]*.invoke.json
+/benchmark-runs/**/r[0-9]*.response.json
+/benchmark-runs/**/r[0-9]*.request.json
+/benchmark-runs/**/r[0-9]*.log.txt
+/benchmark-runs/**/invocations.jsonl
+/benchmark-runs/**/runner.py
+/localstack/results/**/r[0-9]*.invoke.json
+/localstack/results/**/r[0-9]*.response.json
+/localstack/results/**/r[0-9]*.request.json
+/localstack/results/**/r[0-9]*.log.txt
+/localstack/results/**/invocations.jsonl
+/localstack/results/**/runner.py
+/localstack/results/**/downloaded-dataset.json
+
+### Superseded trials from 28 October (preserved locally) ###
+/benchmark-runs/20261028T160746637979Z/
+/benchmark-runs/20261028T160934006034Z/
+/localstack/results/20261028T160820832610Z/

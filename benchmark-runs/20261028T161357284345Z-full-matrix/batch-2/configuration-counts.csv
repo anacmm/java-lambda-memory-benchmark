@@ -1,0 +1,11 @@
+memoryMb,workload,collected,warm,cold,warmup,failed,invalid,collectedFailed,collectedInvalid,warmSampleWarning
+3072,cpu,60,60,0,6,0,0,0,0,False
+3072,io,60,60,0,6,0,0,0,0,False
+4096,cpu,60,60,0,6,0,0,0,0,False
+4096,io,60,60,0,6,0,0,0,0,False
+6144,cpu,60,60,0,6,0,0,0,0,False
+6144,io,60,60,0,6,0,0,0,0,False
+8192,cpu,60,60,0,6,0,0,0,0,False
+8192,io,60,60,0,6,0,0,0,0,False
+10240,cpu,60,60,0,6,0,0,0,0,False
+10240,io,60,60,0,6,0,0,0,0,False

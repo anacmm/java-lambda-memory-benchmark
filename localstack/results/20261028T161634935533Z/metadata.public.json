@@ -1,0 +1,307 @@
+{
+  "environment": "localstack",
+  "endpoint": "http://127.0.0.1:4566",
+  "region": "eu-west-2",
+  "function": "java-benchmark-local-20261028t161634935533z",
+  "bucket": "java-benchmark-local-20261028t161634935533z",
+  "artifactSHA256": "37705d0f1a88a3cc222e3a5f0853be8dc1855f68620e3c6ad49dd4a37f0737b8",
+  "datasetSHA256": "2939695c8e099f3d73ea84e17069dc7cbae9304be72972d0be0f5f1b698fa10e",
+  "host": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "hostDetails": {
+    "architecture": "arm64",
+    "os": "Darwin",
+    "osRelease": "27.0.0",
+    "osVersion": "Darwin Kernel Version 27.0.0: Tue Aug 11 21:05:57 PDT 2026; root:xnu-13432.1.9~1/RELEASE_ARM64_T8140"
+  },
+  "docker": {
+    "version": {
+      "client": "29.7.2",
+      "server": "29.7.2"
+    },
+    "daemonResources": {
+      "cpus": 6,
+      "memoryBytes": 4106870784,
+      "architecture": "aarch64",
+      "osType": "linux",
+      "operatingSystem": "Docker Desktop"
+    },
+    "localstackContainers": [
+      {
+        "id": "1757a235b072a59f77de898e96bb47039c77495da61c432c9c81f549f94ce52f",
+        "name": "/java-benchmark-local-localstack-1",
+        "functionName": "",
+        "imageId": "sha256:801a3dff7f6a23857e7310b7602e67d52a29dfdcb03e09f7c608d5c57d24b792",
+        "imageReference": "localstack/localstack:2026.09.0@sha256:801a3dff7f6a23857e7310b7602e67d52a29dfdcb03e09f7c608d5c57d24b792",
+        "limits": {
+          "nanoCpus": 0,
+          "cpuQuota": 0,
+          "cpuPeriod": 0,
+          "cpuShares": 0,
+          "cpusetCpus": "",
+          "memoryBytes": 0,
+          "memoryReservationBytes": 0,
+          "memorySwapBytes": 0
+        },
+        "image": {
+          "id": "sha256:801a3dff7f6a23857e7310b7602e67d52a29dfdcb03e09f7c608d5c57d24b792",
+          "repoDigests": [
+            "localstack/localstack@sha256:801a3dff7f6a23857e7310b7602e67d52a29dfdcb03e09f7c608d5c57d24b792"
+          ],
+          "architecture": "arm64"
+        }
+      }
+    ],
+    "lambdaContainerSnapshots": [
+      {
+        "repetition": 1,
+        "workload": "cpu",
+        "observedAt": "2026-10-28T16:16:51.955554+00:00",
+        "containers": [
+          {
+            "id": "dc241df33a763d19870728b86a45886c7a1952d2bebde34a5a275bbc9d3b8b2d",
+            "name": "/java-benchmark-local-localstack-1-lambda-java-benchmark-local-20261028t161634935533z-0c7cfd3e548a0502ea4a09927d2196f0",
+            "functionName": "java-benchmark-local-20261028t161634935533z",
+            "imageId": "sha256:e0a5c70ae7962e83bcc5a6deada474a1646e2d0df5136607c0f21190403272ee",
+            "imageReference": "public.ecr.aws/lambda/provided:al2023",
+            "limits": {
+              "nanoCpus": 0,
+              "cpuQuota": 0,
+              "cpuPeriod": 0,
+              "cpuShares": 0,
+              "cpusetCpus": "",
+              "memoryBytes": 0,
+              "memoryReservationBytes": 0,
+              "memorySwapBytes": 0
+            }
+          }
+        ]
+      },
+      {
+        "repetition": 1,
+        "workload": "io",
+        "observedAt": "2026-10-28T16:17:20.720770+00:00",
+        "containers": [
+          {
+            "id": "dc241df33a763d19870728b86a45886c7a1952d2bebde34a5a275bbc9d3b8b2d",
+            "name": "/java-benchmark-local-localstack-1-lambda-java-benchmark-local-20261028t161634935533z-0c7cfd3e548a0502ea4a09927d2196f0",
+            "functionName": "java-benchmark-local-20261028t161634935533z",
+            "imageId": "sha256:e0a5c70ae7962e83bcc5a6deada474a1646e2d0df5136607c0f21190403272ee",
+            "imageReference": "public.ecr.aws/lambda/provided:al2023",
+            "limits": {
+              "nanoCpus": 0,
+              "cpuQuota": 0,
+              "cpuPeriod": 0,
+              "cpuShares": 0,
+              "cpusetCpus": "",
+              "memoryBytes": 0,
+              "memoryReservationBytes": 0,
+              "memorySwapBytes": 0
+            }
+          }
+        ]
+      },
+      {
+        "repetition": 2,
+        "workload": "io",
+        "observedAt": "2026-10-28T16:17:36.923873+00:00",
+        "containers": [
+          {
+            "id": "dc241df33a763d19870728b86a45886c7a1952d2bebde34a5a275bbc9d3b8b2d",
+            "name": "/java-benchmark-local-localstack-1-lambda-java-benchmark-local-20261028t161634935533z-0c7cfd3e548a0502ea4a09927d2196f0",
+            "functionName": "java-benchmark-local-20261028t161634935533z",
+            "imageId": "sha256:e0a5c70ae7962e83bcc5a6deada474a1646e2d0df5136607c0f21190403272ee",
+            "imageReference": "public.ecr.aws/lambda/provided:al2023",
+            "limits": {
+              "nanoCpus": 0,
+              "cpuQuota": 0,
+              "cpuPeriod": 0,
+              "cpuShares": 0,
+              "cpusetCpus": "",
+              "memoryBytes": 0,
+              "memoryReservationBytes": 0,
+              "memorySwapBytes": 0
+            }
+          }
+        ]
+      },
+      {
+        "repetition": 2,
+        "workload": "cpu",
+        "observedAt": "2026-10-28T16:17:54.130499+00:00",
+        "containers": [
+          {
+            "id": "dc241df33a763d19870728b86a45886c7a1952d2bebde34a5a275bbc9d3b8b2d",
+            "name": "/java-benchmark-local-localstack-1-lambda-java-benchmark-local-20261028t161634935533z-0c7cfd3e548a0502ea4a09927d2196f0",
+            "functionName": "java-benchmark-local-20261028t161634935533z",
+            "imageId": "sha256:e0a5c70ae7962e83bcc5a6deada474a1646e2d0df5136607c0f21190403272ee",
+            "imageReference": "public.ecr.aws/lambda/provided:al2023",
+            "limits": {
+              "nanoCpus": 0,
+              "cpuQuota": 0,
+              "cpuPeriod": 0,
+              "cpuShares": 0,
+              "cpusetCpus": "",
+              "memoryBytes": 0,
+              "memoryReservationBytes": 0,
+              "memorySwapBytes": 0
+            }
+          }
+        ]
+      }
+    ],
+    "collectionWarnings": []
+  },
+  "measurementMetrics": {
+    "handlerMs": "Java handler elapsed time; primary local metric; excludes initialization, framework decoding/serialization and log emission",
+    "s3Ms": "Java elapsed time for full SDK GET, buffering and Content-Length validation",
+    "jsonMs": "Java dataset JSON deserialization; null for io",
+    "cpuMs": "Java elapsed calculation time for cpu or CRC32 time for io; not CPU utilization",
+    "callerMs": "Python elapsed time including AWS CLI process, invocation and local request/response/log processing",
+    "durationMs": "Not summarized locally; LocalStack REPORT Duration is not AWS REPORT Duration"
+  },
+  "localstackHealth": {
+    "features": {
+      "persistence": "disabled"
+    },
+    "services": {
+      "account": "disabled",
+      "acm-pca": "disabled",
+      "acm": "disabled",
+      "amplify": "disabled",
+      "apigateway": "disabled",
+      "apigatewaymanagementapi": "disabled",
+      "apigatewayv2": "disabled",
+      "appconfig": "disabled",
+      "appconfigdata": "disabled",
+      "application-autoscaling": "disabled",
+      "appsync": "disabled",
+      "athena": "disabled",
+      "autoscaling": "disabled",
+      "backup": "disabled",
+      "batch": "disabled",
+      "bedrock-agentcore-control": "disabled",
+      "bedrock-agentcore": "disabled",
+      "bedrock-runtime": "disabled",
+      "bedrock": "disabled",
+      "ce": "disabled",
+      "cloudcontrol": "disabled",
+      "cloudformation": "disabled",
+      "cloudfront-keyvaluestore": "disabled",
+      "cloudfront": "disabled",
+      "cloudtrail": "disabled",
+      "cloudwatch": "disabled",
+      "codeartifact": "disabled",
+      "codebuild": "disabled",
+      "codecommit": "disabled",
+      "codeconnections": "disabled",
+      "codedeploy": "disabled",
+      "codepipeline": "disabled",
+      "codestar-connections": "disabled",
+      "cognito-identity": "disabled",
+      "cognito-idp": "disabled",
+      "config": "disabled",
+      "dms": "disabled",
+      "docdb": "disabled",
+      "dsql": "disabled",
+      "dynamodb": "disabled",
+      "dynamodbstreams": "disabled",
+      "ec2": "disabled",
+      "ecr": "disabled",
+      "ecs": "disabled",
+      "efs": "disabled",
+      "eks-auth": "disabled",
+      "eks": "disabled",
+      "elasticache": "disabled",
+      "elasticbeanstalk": "disabled",
+      "elb": "disabled",
+      "elbv2": "disabled",
+      "emr-serverless": "disabled",
+      "emr": "disabled",
+      "es": "disabled",
+      "events": "disabled",
+      "firehose": "disabled",
+      "fis": "disabled",
+      "glacier": "disabled",
+      "glue": "disabled",
+      "iam": "disabled",
+      "identitystore": "disabled",
+      "iot-data": "disabled",
+      "iot": "disabled",
+      "iotwireless": "disabled",
+      "kafka": "disabled",
+      "kinesis": "disabled",
+      "kinesisanalyticsv2": "disabled",
+      "kms": "disabled",
+      "lakeformation": "disabled",
+      "lambda": "running",
+      "logs": "disabled",
+      "managedblockchain": "disabled",
+      "mediaconvert": "disabled",
+      "memorydb": "disabled",
+      "mq": "disabled",
+      "mwaa": "disabled",
+      "neptune": "disabled",
+      "opensearch": "disabled",
+      "organizations": "disabled",
+      "pinpoint": "disabled",
+      "pipes": "disabled",
+      "ram": "disabled",
+      "rds-data": "disabled",
+      "rds": "disabled",
+      "redshift-data": "disabled",
+      "redshift": "disabled",
+      "resource-groups": "disabled",
+      "resourcegroupstaggingapi": "disabled",
+      "route53": "disabled",
+      "route53resolver": "disabled",
+      "s3": "running",
+      "s3control": "disabled",
+      "s3files": "disabled",
+      "s3tables": "disabled",
+      "sagemaker-runtime": "disabled",
+      "sagemaker": "disabled",
+      "scheduler": "disabled",
+      "secretsmanager": "disabled",
+      "serverlessrepo": "disabled",
+      "servicediscovery": "disabled",
+      "ses": "disabled",
+      "sesv2": "disabled",
+      "shield": "disabled",
+      "sns": "disabled",
+      "sqs": "disabled",
+      "ssm": "disabled",
+      "sso-admin": "disabled",
+      "stepfunctions": "disabled",
+      "sts": "running",
+      "support": "disabled",
+      "swf": "disabled",
+      "textract": "disabled",
+      "timestream-query": "disabled",
+      "timestream-write": "disabled",
+      "transcribe": "disabled",
+      "transfer": "disabled",
+      "verifiedpermissions": "disabled",
+      "wafv2": "disabled",
+      "xray": "disabled"
+    },
+    "edition": "pro",
+    "version": "2026.9.0"
+  },
+  "arguments": {
+    "samples": 30,
+    "warmups": 3,
+    "repetitions": 2,
+    "memory": 1024
+  },
+  "interpretation": "Local integration/timings only; not AWS memory sizing or billing",
+  "functionConfiguration": {
+    "Runtime": "provided.al2023",
+    "Architectures": [
+      "arm64"
+    ],
+    "MemorySize": 1024,
+    "CodeSha256": "N3BdDxqIo8wiLjpfCFO+jcGFX2hiDjxq1J3Uo38HN7g=",
+    "State": "Active",
+    "Timeout": 60
+  }
+}

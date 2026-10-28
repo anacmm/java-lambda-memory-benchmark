@@ -13,8 +13,11 @@ the adjacent `metadata.public.json` in the published repository.
 
 The original legacy text logs, first-trial binary archive, build outputs, deployment
 outputs, Python caches and credential files are also ignored. They are preserved
-locally rather than edited or deleted. Raw response/log-tail evidence for the dated
-runs is included; request IDs identify invocations and are not credentials.
+locally rather than edited or deleted. Historical tracked runs include raw
+response/log-tail evidence; request IDs identify invocations and are not credentials.
+New runs publish graphs, aggregate measurements, summaries, configuration counts
+and redacted metadata. Per-invocation files, JSONL evidence and duplicate downloaded
+datasets stay local. Ignore rules do not remove previously committed evidence.
 
 `localstack/.env` contains a private LocalStack activation token and must never be
 committed. Copying its token into source code or documentation is unnecessary.
@@ -26,3 +29,13 @@ New runs create fresh evidence directories. Before publishing a future run, crea
 a reviewed redacted metadata copy and repeat the secret scan; `.gitignore` is not
 a substitute for reviewing new files. Keep the original local metadata for private
 reproducibility and audit purposes.
+
+The 28 October full matrices keep private orchestration `*.log` files locally.
+LocalStack matrices publish `*.public.log` and `matrix-summary.public.json` copies
+with relative project paths. The plotting script accepts these published copies
+and each invocation run's `metadata.public.json`. Nested AWS batch metadata follows
+the same private-original/public-copy convention.
+
+The comparison CSV contains every plotted mean and p95 value. Regenerating graphs
+with `scripts/plot-benchmark-runs.py` requires the local raw evidence directories;
+the compact published commit does not include those per-invocation files.

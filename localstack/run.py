@@ -244,7 +244,7 @@ def parse_args(argv=None):
     parser.add_argument('--samples', type=int, default=30, help='Collected calls per workload/repetition (default: 30)')
     parser.add_argument('--warmups', type=int, default=3)
     parser.add_argument('--repetitions', type=int, default=2)
-    parser.add_argument('--memory', type=int, default=1024, choices=(256, 512, 1024, 1536, 2048, 3072, 4096),
+    parser.add_argument('--memory', type=int, default=1024, choices=(256, 512, 1024, 1536, 1769, 2048, 3072, 4096, 6144, 8192, 10240),
                         help='Local configured memory, not AWS-equivalent compute allocation')
     args = parser.parse_args(argv)
     attempts = 2 * args.repetitions * (args.samples + args.warmups)

@@ -17,6 +17,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 MEMORIES = [256, 512, 1024, 1536, 2048, 3072, 4096]
+SUPPORTED_MEMORIES = [256, 512, 1024, 1536, 1769, 2048, 3072, 4096, 6144, 8192, 10240]
 MEASUREMENT_METRICS = {
     'durationMs': 'AWS REPORT Duration; primary AWS summary metric, not Java handlerMs',
     'handlerMs': 'Java handler elapsed time; excludes initialization, framework decoding/serialization and log emission',
@@ -175,7 +176,7 @@ def main():
     parser.add_argument('--warmups', type=int, default=3)
     parser.add_argument('--repetitions', type=int, default=2, help='Alternate workload and memory batch order')
     parser.add_argument('--interval', type=float, default=0, help='Seconds between sequential calls')
-    parser.add_argument('--memories', type=int, nargs='+', default=MEMORIES, choices=MEMORIES)
+    parser.add_argument('--memories', type=int, nargs='+', default=MEMORIES, choices=SUPPORTED_MEMORIES)
     parser.add_argument('--key', default='dataset.json')
     parser.add_argument('--gb-second-price', type=float, help='Regional ARM64 USD per GB-second')
     parser.add_argument('--request-price', type=float, default=0.0000002, help='USD per request, excluding free tier')

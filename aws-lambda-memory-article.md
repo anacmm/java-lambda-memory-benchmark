@@ -4,6 +4,22 @@
 
 > **Experiment completed October 2026.** This article reports three full AWS benchmark runs (9, 14 and 19 October) and two LocalStack experiments (14 and 19 October). Results concern primarily **warm execution** and **billed Lambda compute consumption**, not a complete production cost model.
 
+## Update: two full runs on 28 October
+
+Two additional runs cover **11 memory settings**, including 1769, 6144, 8192 and 10,240 MB, in both AWS and LocalStack. Each run completed **1,452 valid invocations per environment**, with **60 warm collected samples per workload and memory setting**, and no failed or invalid calls. AWS ran in **eu-west-1**, whereas the historical results below use eu-west-2. Both AWS runs restored 1024 MB, and both local matrices cleaned up their temporary resources.
+
+Each AWS matrix was split into two batches to retain the runner's 1,000-invocation limit. Calls were sequential within each environment; AWS and LocalStack matrices ran concurrently. These repeated runs share the same deployment and local host, so they are not independent hardware replications.
+
+![Two AWS runs on 28 October: mean warm REPORT duration](benchmark-runs/20261028-two-runs/aws-duration.png)
+
+![Two AWS and LocalStack runs on 28 October: mean warm handler time](benchmark-runs/20261028-two-runs/handler-comparison.png)
+
+The second graph uses **handlerMs in both environments**. LocalStack configured memory does not establish equivalent AWS CPU allocation or production performance. Settings on the horizontal axes are equally spaced for readability.
+
+[All updated graphs, including billed compute and downloadable SVGs](benchmark-runs/20261028-two-runs/README.md) · [Measurements and p95 values](benchmark-runs/20261028-two-runs/measurements.csv) · [Exact source run folders](benchmark-runs/20261028-two-runs/sources.json)
+
+The remaining sections retain the original three-day experiment and its results.
+
 ## Why I started this
 
 Attending AWS Community Summit Birmingham and Manchester in 2026 left me wanting to build something practical. The enthusiasm of [🐔 Guilherme Dalla Rosa](https://www.linkedin.com/in/guidr/), [Matheus das Mercês](https://www.linkedin.com/search/results/people/?keywords=Matheus%20das%20Merc%C3%AAs), [Robin Ford](https://www.linkedin.com/search/results/people/?keywords=Robin%20Ford%20AWS%20Accenture) and [Yan Cui](https://www.linkedin.com/search/results/people/?keywords=Yan%20Cui%20AWS) was particularly infectious.

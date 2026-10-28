@@ -15,9 +15,10 @@ The original legacy text logs, first-trial binary archive, build outputs, deploy
 outputs, Python caches and credential files are also ignored. They are preserved
 locally rather than edited or deleted. Historical tracked runs include raw
 response/log-tail evidence; request IDs identify invocations and are not credentials.
-New runs publish graphs, aggregate measurements, summaries, configuration counts
-and redacted metadata. Per-invocation files, JSONL evidence and duplicate downloaded
-datasets stay local. Ignore rules do not remove previously committed evidence.
+The 28 October graphs, summaries, aggregate measurements and run documentation
+remain in the repository. Raw per-invocation measurements, JSONL evidence and
+downloaded datasets are preserved locally and ignored for commits. Private
+deployment metadata remains local, with redacted public copies as above.
 
 `localstack/.env` contains a private LocalStack activation token and must never be
 committed. Copying its token into source code or documentation is unnecessary.
@@ -37,5 +38,11 @@ and each invocation run's `metadata.public.json`. Nested AWS batch metadata foll
 the same private-original/public-copy convention.
 
 The comparison CSV contains every plotted mean and p95 value. Regenerating graphs
-with `scripts/plot-benchmark-runs.py` requires the local raw evidence directories;
-the compact published commit does not include those per-invocation files.
+with `scripts/plot-benchmark-runs.py` requires the raw evidence preserved locally;
+those per-invocation files are excluded from commits.
+
+The 28 October 2026 results are under investigation due to unexpected variability,
+particularly in LocalStack I/O performance. They are retained for comparison with
+future runs and are excluded from the main benchmark article and its conclusions.
+The article continues to use the 9, 14 and 19 October AWS runs and corresponding
+LocalStack experiments. Reassess the newer evidence only after additional runs.

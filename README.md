@@ -7,10 +7,18 @@ Lambda memory configuration depend on what a Java Lambda actually does?**
 Compare CPU-heavy and S3 I/O-heavy workload profiles in the same environment at
 256, 512, 1024, 1536, 2048, 3072, and 4096 MB. Within each workload, memory allocation
 is the only intended variable. Across workloads, workload type is intentionally
-the second experimental dimension. Two complete AWS runs are retained under
-`benchmark-runs/`; the article records their findings and replication limits.
+the second experimental dimension. The article uses the 9, 14 and 19 October AWS
+runs and corresponding LocalStack experiments as its evidence.
 A separate [LocalStack experiment](localstack/README.md) tests the same native
 application locally, with evidence kept under `localstack/results/`.
+
+The **28 October 2026 results are under investigation** due to unexpected
+variability, particularly in LocalStack I/O performance. Their raw measurements,
+graphs and run documentation are preserved unchanged for comparison with future
+runs. Graphs and summaries remain in Git; raw evidence stays local and is ignored
+for commits. These results are excluded from the main article and its conclusions
+until additional benchmarks support reassessment. See the preserved
+[28 October comparison](benchmark-runs/20261028-two-runs/README.md).
 
 ## Architecture and layout
 

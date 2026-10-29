@@ -1,6 +1,6 @@
 # 29 October 2026: AWS and LocalStack timings
 
-Both environments completed the full 11-memory matrix sequentially: LocalStack first, then AWS in `eu-west-2`. Each ran 1,452 valid calls, with two repetitions, three warmups and 30 collected calls per workload/memory/repetition. Every workload/memory configuration has 60 valid warm collected samples; no failed or invalid calls were recorded. AWS memory was restored to 1024 MB. The AWS stack remains deployed.
+Both environments completed the full 11-memory matrix sequentially: LocalStack first, then AWS in `eu-west-2`. Each ran 1,452 valid calls, with two repetitions, three warmups and 30 collected calls per workload/memory/repetition. Every workload/memory configuration has 60 valid warm collected samples; no failed or invalid calls were recorded. AWS memory was restored to 1024 MB. The AWS benchmark stack was subsequently deleted and the LocalStack container/network removed. Recorded results were preserved. Shared CDK bootstrap resources are managed separately.
 
 ## Timing files
 

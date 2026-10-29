@@ -18,6 +18,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 ENDPOINT = 'http://127.0.0.1:4566'
 REGION = 'eu-west-2'
+MEMORIES = [256, 512, 1024, 1536, 1769, 2048, 3072, 4096, 6144, 8192, 10240]
 DOCKER_NETWORK = 'java-benchmark-local'
 MEASUREMENT_METRICS = {
     'handlerMs': 'Java handler elapsed time; primary local metric; excludes initialization, framework decoding/serialization and log emission',
@@ -244,17 +245,58 @@ def parse_args(argv=None):
     parser.add_argument('--samples', type=int, default=30, help='Collected calls per workload/repetition (default: 30)')
     parser.add_argument('--warmups', type=int, default=3)
     parser.add_argument('--repetitions', type=int, default=2)
-    parser.add_argument('--memory', type=int, default=1024, choices=(256, 512, 1024, 1536, 1769, 2048, 3072, 4096, 6144, 8192, 10240),
+    selection = parser.add_mutually_exclusive_group()
+    selection.add_argument('--memories', type=int, nargs='+', choices=MEMORIES,
+                           help='Sequential memory matrix (default: all 11 sizes)')
+    selection.add_argument('--memory', type=int, choices=MEMORIES,
                         help='Local configured memory, not AWS-equivalent compute allocation')
     args = parser.parse_args(argv)
     attempts = 2 * args.repetitions * (args.samples + args.warmups)
     if args.samples < 1 or args.warmups < 0 or args.repetitions < 1 or attempts > 1000:
         parser.error('Use positive samples/repetitions, nonnegative warmups, and at most 1000 calls')
+    args.memories = list(dict.fromkeys(args.memories or ([args.memory] if args.memory else MEMORIES)))
+    if attempts * len(args.memories) > 1500:
+        parser.error('Memory matrix exceeds 1,500 calls')
     return args
 
 
 def main():
     args = parse_args()
+    if args.memory is not None:
+        return run_single(args)
+    stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
+    destination = ROOT / 'localstack/results' / (stamp + '-full-matrix')
+    destination.mkdir(parents=True, exist_ok=False)
+    summary = dict(environment='localstack', memories=args.memories,
+                   expectedInvocations=len(args.memories) * 2 * args.repetitions * (args.samples + args.warmups),
+                   configurations=[], stopReason='Running')
+    print(f'LocalStack sequential matrix: {args.memories}\nResults: {destination}', flush=True)
+    code = 1
+    try:
+        for memory in args.memories:
+            print(f'Starting {memory} MB', flush=True)
+            single = argparse.Namespace(**{**vars(args), 'memory': memory})
+            result_path = destination / str(memory)
+            code = run_single(single, result_path)
+            summary['configurations'].append(dict(memoryMb=memory, results=str(result_path),
+                                                 **json.loads((result_path / 'summary.json').read_text())))
+            (destination / 'matrix-summary.json').write_text(json.dumps(summary, indent=2))
+            if code:
+                break
+        summary['stopReason'] = 'Completed' if code == 0 else 'Configuration failed'
+    except KeyboardInterrupt:
+        summary['stopReason'] = 'Cancelled'
+        code = 1
+    except (RuntimeError, ValueError, OSError, subprocess.TimeoutExpired) as error:
+        summary['stopReason'] = str(error)
+        code = 1
+    finally:
+        (destination / 'matrix-summary.json').write_text(json.dumps(summary, indent=2))
+        print(f'Matrix {summary["stopReason"]}: {destination}', flush=True)
+    return code
+
+
+def run_single(args, destination=None):
     attempts = 2 * args.repetitions * (args.samples + args.warmups)
     artifact = ROOT / 'lambda/target/function.zip'
     dataset = ROOT / 'sample/dataset.json'
@@ -263,7 +305,7 @@ def main():
         raise ValueError('Dataset hash changed; expected the original AWS fixture')
     local_health = health()
     stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
-    destination = ROOT / 'localstack/results' / stamp
+    destination = destination or ROOT / 'localstack/results' / stamp
     destination.mkdir(parents=True, exist_ok=False)
     function = 'java-benchmark-local-' + stamp.lower()
     bucket = 'java-benchmark-local-' + stamp.lower()

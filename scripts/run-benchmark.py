@@ -16,8 +16,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-MEMORIES = [256, 512, 1024, 1536, 2048, 3072, 4096]
-SUPPORTED_MEMORIES = [256, 512, 1024, 1536, 1769, 2048, 3072, 4096, 6144, 8192, 10240]
+MEMORIES = [256, 512, 1024, 1536, 1769, 2048, 3072, 4096, 6144, 8192, 10240]
+SUPPORTED_MEMORIES = MEMORIES.copy()
 MEASUREMENT_METRICS = {
     'durationMs': 'AWS REPORT Duration; primary AWS summary metric, not Java handlerMs',
     'handlerMs': 'Java handler elapsed time; excludes initialization, framework decoding/serialization and log emission',
@@ -29,7 +29,7 @@ MEASUREMENT_METRICS = {
 }
 
 
-MAX_INVOCATIONS = 1000
+MAX_INVOCATIONS = 1500
 MAX_CONSECUTIVE_ERRORS = 5
 
 
@@ -59,7 +59,7 @@ class Safety:
     def invoke(self):
         self.check()
         if self.invocations >= MAX_INVOCATIONS:
-            raise BenchmarkStopped('Maximum of 1,000 invocations reached')
+            raise BenchmarkStopped(f'Maximum of {MAX_INVOCATIONS:,} invocations reached')
         self.invocations += 1  # Count attempts before sending, including failures.
 
 
@@ -188,7 +188,7 @@ def main():
         parser.error('max-duration must be finite and positive; interval must be finite')
     expected = len(args.memories) * 2 * args.repetitions * (args.warmups + args.samples)
     if expected > MAX_INVOCATIONS:
-        parser.error(f'Expected {expected} invocations exceeds the 1,000 invocation limit')
+        parser.error(f'Expected {expected} invocations exceeds the {MAX_INVOCATIONS:,} invocation limit')
     resources = json.loads(args.outputs.read_text())['JavaBenchmarkStack']
     function, bucket = resources['FunctionName'], resources['BucketName']
     print(f'Region: {args.region}\nFunction: {function}\nMemory configurations: {args.memories}\n'

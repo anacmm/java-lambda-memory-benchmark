@@ -49,15 +49,17 @@ docker compose -f localstack/compose.yaml up -d --wait --wait-timeout 180
 python3 localstack/run.py
 ```
 
-The default is **132 sequential invocations**: two workloads, two repetitions,
+The default is **1,452 sequential invocations** across `256, 512, 1024, 1536,
+1769, 2048, 3072, 4096, 6144, 8192, 10240` MB. Each memory runs 132 calls:
+two workloads, two repetitions,
 and three warmups plus 30 collected calls per batch. This gives **60 collected
-calls and six warmups per workload**, matching AWS's per-memory methodology.
+calls and six warmups per workload at each memory**, matching AWS's per-memory methodology.
 Workload order reverses on repetition two. All invocations are validated,
 including warmups. Unexpected collected cold calls remain classified separately,
-so 60 collected calls do not guarantee 60 valid warm samples. For one call per workload:
+so 60 collected calls do not guarantee 60 valid warm samples. For one call per workload at a single memory:
 
 ```bash
-python3 localstack/run.py --samples 1 --warmups 0 --repetitions 1
+python3 localstack/run.py --memory 1024 --samples 1 --warmups 0 --repetitions 1
 ```
 
 The explicit equivalent of the defaults is:
@@ -66,7 +68,11 @@ The explicit equivalent of the defaults is:
 python3 localstack/run.py --samples 30 --warmups 3 --repetitions 2
 ```
 
-`--memory` defaults to 1024 MB. It sets local Lambda configuration only. It does
+`--memories` selects a subset of the matrix; `--memory 1024` runs one size.
+Memory configurations run sequentially, with separate resources and cleanup.
+The matrix stops on the first failure and preserves a `matrix-summary.json` plus
+per-memory raw results in its timestamped directory. AWS is never started.
+These options set local Lambda configuration only. LocalStack does
 not recreate AWS's CPU-to-memory relationship; a local sweep cannot establish AWS
 right-sizing. Runs use unique local bucket/function names. The runner deletes
 only its own local resources afterwards, including on normal failures. Raw results

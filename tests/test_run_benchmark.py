@@ -38,14 +38,14 @@ class SafetyTests(unittest.TestCase):
 
     def test_invocation_limit_counts_failed_attempts(self):
         args = SimpleNamespace(region='eu-west-2', safety=runner.Safety(1800))
-        args.safety.invocations = 999
+        args.safety.invocations = runner.MAX_INVOCATIONS - 1
         with patch.object(runner.subprocess, 'run', return_value=SimpleNamespace(returncode=1, stderr='error', stdout='')) as call:
             with self.assertRaises(runner.AwsError):
                 runner.aws(args, 'lambda', 'invoke')
             with self.assertRaises(runner.BenchmarkStopped):
                 runner.aws(args, 'lambda', 'invoke')
             self.assertEqual(call.call_count, 1)
-            self.assertEqual(args.safety.invocations, 1000)
+            self.assertEqual(args.safety.invocations, runner.MAX_INVOCATIONS)
             self.assertEqual(call.call_args.kwargs['env']['AWS_MAX_ATTEMPTS'], '1')
 
     def test_deadline_blocks_calls_but_not_restoration(self):
@@ -144,7 +144,7 @@ class SafetyTests(unittest.TestCase):
             with patch('sys.argv', ['runner', '--outputs', str(outputs)]), patch('builtins.input', return_value='no'), patch('builtins.print') as printing, patch.object(runner.subprocess, 'run') as aws:
                 runner.main()
                 aws.assert_not_called()
-                self.assertIn('Expected invocations: 924', printing.call_args_list[0].args[0])
+                self.assertIn('Expected invocations: 1452', printing.call_args_list[0].args[0])
 
     def test_restoration_failure_is_reported(self):
         final, _, _, _ = self.run_mocked('cancel', restore_failure=True)

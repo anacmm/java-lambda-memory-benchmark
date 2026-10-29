@@ -39,7 +39,30 @@ class LocalExperimentTests(unittest.TestCase):
     def test_defaults_match_aws_per_configuration(self):
         args = run.parse_args([])
         self.assertEqual((args.samples, args.warmups, args.repetitions), (30, 3, 2))
+        self.assertEqual(args.memories, run.MEMORIES)
         self.assertEqual(2 * args.repetitions * (args.samples + args.warmups), 132)
+
+    def test_memory_selection_and_matrix_limit(self):
+        self.assertEqual(run.parse_args(['--memory', '1769']).memories, [1769])
+        self.assertEqual(run.parse_args(['--memories', '256', '512', '256']).memories, [256, 512])
+        with patch('sys.stderr'), self.assertRaises(SystemExit):
+            run.parse_args(['--samples', '100'])
+
+    def test_matrix_runs_in_order_and_stops_after_failure(self):
+        for failure in (False, True):
+            with self.subTest(failure=failure), tempfile.TemporaryDirectory() as directory:
+                calls = []
+                def single(args, destination):
+                    calls.append(args.memory)
+                    destination.mkdir(parents=True)
+                    (destination / 'summary.json').write_text(json.dumps(dict(stopReason='failed' if failure else 'Completed')))
+                    return int(failure)
+                with patch.object(run, 'ROOT', Path(directory)), patch.object(run, 'run_single', side_effect=single), patch('sys.argv', ['local', '--memories', '256', '512']), patch('builtins.print'):
+                    self.assertEqual(run.main(), int(failure))
+                self.assertEqual(calls, [256] if failure else [256, 512])
+                summary = json.loads(next(Path(directory).rglob('matrix-summary.json')).read_text())
+                self.assertEqual(summary['expectedInvocations'], 264)
+                self.assertEqual(len(summary['configurations']), len(calls))
 
     def test_repetition_statistics_do_not_mix_batches(self):
         rows = [dict(self.event(), phase='sample', outcome='valid', callerMs=value,

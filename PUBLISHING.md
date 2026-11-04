@@ -44,5 +44,7 @@ those per-invocation files are excluded from commits.
 The 28 October 2026 results are under investigation due to unexpected variability,
 particularly in LocalStack I/O performance. They are retained for comparison with
 future runs and are excluded from the main benchmark article and its conclusions.
-The article continues to use the 9, 14 and 19 October AWS runs and corresponding
-LocalStack experiments. Reassess the newer evidence only after additional runs.
+The article retains the 9, 14 and 19 October evidence and now separately analyses
+four complete LocalStack/AWS pairs from 4 November. The 29 October matrix remains
+a separate recorded comparison. The November repetitions do not resolve the cause
+of the 28 October variability; those results remain excluded from conclusions.

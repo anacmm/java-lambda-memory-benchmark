@@ -2,7 +2,7 @@
 
 ## CPU-heavy vs S3-heavy workloads on AWS Lambda
 
-> **Experiment completed October 2026.** This article reports three full AWS benchmark runs (9, 14 and 19 October) and two LocalStack experiments (14 and 19 October). Results concern primarily **warm execution** and **billed Lambda compute consumption**, not a complete production cost model.
+> **Updated 4 November 2026.** The original evidence comprises three AWS runs (9, 14 and 19 October) and two LocalStack experiments (14 and 19 October). Four new LocalStack/AWS pairs extend the matrix to 10240 MB. Results concern primarily **warm execution** and **billed Lambda compute consumption**, not a complete production cost model.
 
 ## Why I started this
 
@@ -32,7 +32,7 @@ Two functions may both read S3 objects but spend their time very differently. Sh
 
 ## The experiment
 
-The POC uses **Java 21, Quarkus Native (Mandrel), AWS Lambda on ARM64, Amazon S3, AWS CDK and Maven**. The deployment artifact and dataset remain fixed across the AWS memory configurations:
+The POC uses **Java 21, Quarkus Native (Mandrel), AWS Lambda on ARM64, Amazon S3, AWS CDK and Maven**. The deployment artifact and dataset remain fixed across the original October AWS memory configurations:
 
 `256 · 512 · 1024 · 1536 · 2048 · 3072 · 4096 MB`
 
@@ -64,7 +64,7 @@ The LocalStack comparison uses **Java handler time in both environments**, becau
 
 ## Benchmark methodology
 
-Each AWS run covers **seven memory settings × two workloads**, with **two repetitions** per combination. Each combination has **six warmups and 60 collected calls**, for a total of:
+Each original October AWS run covers **seven memory settings × two workloads**, with **two repetitions** per combination. Each combination has **six warmups and 60 collected calls**, for a total of:
 
 ```text
 (6 warmups + 60 collected) × 7 memory settings × 2 workloads
@@ -73,11 +73,11 @@ Each AWS run covers **seven memory settings × two workloads**, with **two repet
 
 Invocations are sequential; the runner alternates or reverses batch order, checks the response and checksum, retains raw measurements, and restores the original **1024 MB** configuration afterwards.
 
-The application's `coldStart` flag separates newly initialised execution environments from warm samples. The experiment **does not intentionally induce cold starts**. All 14 observed cold starts in each AWS run occurred during warmups, not the 60 collected warm calls per combination.
+The application's `coldStart` flag separates newly initialised execution environments from warm samples. The experiment **does not intentionally induce cold starts**. All 14 observed cold starts in each original October AWS run occurred during warmups, not the 60 collected warm calls per combination.
 
-All three full AWS runs returned **924 valid invocations each**, with no failed or invalid responses. The same native ZIP and dataset hashes were used across runs in **`eu-west-2`**. Each run successfully restored the original Lambda memory setting.
+All three original full AWS runs returned **924 valid invocations each**, with no failed or invalid responses. The same native ZIP and dataset hashes were used across runs in **`eu-west-2`**. Each run successfully restored the original Lambda memory setting.
 
-## Results: three AWS runs
+## Original results: three October AWS runs
 
 The following comparisons use **mean warm AWS REPORT Duration (milliseconds)**, with 60 collected samples per workload/memory/date. These are three separate experimental days, not 180 interchangeable observations from one run.
 
@@ -204,9 +204,52 @@ The 19 October local metadata records an ARM64 macOS host, Docker Desktop **29.7
 
 The inspected Lambda containers had **no explicit Docker per-container CPU quota or memory cap** in the recorded limit fields, even though the application reported a Lambda memory setting of **1024 MB**. That does not mean unlimited resources: containers still share the Docker VM and host. But it does show that **matching a Lambda memory configuration did not reproduce AWS's resource allocation**.
 
-LocalStack also used a local HTTP S3 endpoint rather than AWS's regional S3 HTTPS endpoint. The local run did not test production IAM enforcement, scaling, regional latency or S3 event delivery. Only one local memory setting was tested.
+LocalStack also used a local HTTP S3 endpoint rather than AWS's regional S3 HTTPS endpoint. The local run did not test production IAM enforcement, scaling, regional latency or S3 event delivery. Those October local experiments tested only one memory setting; the November extension below tests the full matrix.
 
 **What LocalStack established:** the same native application can exercise the Lambda/S3 integration and return matching results locally. **What it did not establish:** equivalent latency, CPU allocation or a reliable way to choose AWS memory settings from local timings.
+
+## Four more runs: 4 November 2026
+
+I repeated the experiment four more times, completing the full LocalStack matrix before starting AWS for each pair. The memory list now includes **1769, 6144, 8192 and 10240 MB** alongside the original seven settings. Every matrix uses two repetitions, three warmups and 30 collected calls per workload/memory/repetition: **1,452 calls per environment/run**, with **60 valid warm collected samples per workload/memory**.
+
+All eight matrices completed with **11,616 valid calls in total**, no failed or invalid measurements, successful local cleanup, and successful restoration of AWS memory to 1024 MB. All AWS runs used `eu-west-2`; the native ZIP and dataset hashes match across the eight matrices. These are **four runs on the same day**, not four independent days. Batches reuse execution environments, and the runs are not balanced cold-start experiments.
+
+### The latency pattern persisted at higher memory
+
+The table keeps each run separate and uses **mean warm AWS REPORT Duration in milliseconds**, with 60 samples per cell.
+
+| Workload / memory | Run 1 | Run 2 | Run 3 | Run 4 |
+| --- | ---: | ---: | ---: | ---: |
+| CPU / 256 MB | 709.71 | 685.04 | 773.84 | 772.08 |
+| CPU / 1024 MB | 195.11 | 195.65 | 197.16 | 195.13 |
+| CPU / 3072 MB | 112.97 | 111.36 | 110.24 | 106.68 |
+| CPU / 10240 MB | 107.75 | 110.90 | 110.65 | 109.58 |
+| S3-heavy / 256 MB | 62.39 | 58.20 | 66.28 | 68.46 |
+| S3-heavy / 1024 MB | 31.40 | 30.69 | 31.69 | 33.42 |
+| S3-heavy / 10240 MB | 30.51 | 31.49 | 30.92 | 31.43 |
+
+The CPU path still improved substantially up to about 3072 MB, with **no consistent further speedup at 10240 MB**. This is an approximate plateau rather than a monotonic curve: 6144 MB means rose to **124.34 and 131.06 ms** in runs 2 and 3. The S3-heavy means across every tested setting at or above 1024 MB stayed between **30.44 and 35.36 ms**. The extended matrix did not establish a benefit from very high memory for either synthetic workload.
+
+### The cheapest CPU setting changed between runs
+
+In the October runs, 256 MB had the lowest warm billed compute for both workloads. The new CPU results make that conclusion less stable:
+
+| Run | CPU 256 MB mean GB-s | CPU 512 MB mean GB-s | Lowest CPU compute setting |
+| --- | ---: | ---: | ---: |
+| 1 | 0.177533 | 0.199450 | 256 MB |
+| 2 | 0.171379 | 0.184217 | 256 MB |
+| 3 | 0.193579 | 0.184133 | 512 MB |
+| 4 | 0.193146 | 0.184358 | 512 MB |
+
+**512 MB used less CPU billed compute than 256 MB in runs 3 and 4**, while 256 MB won in runs 1 and 2. The S3-heavy minimum remained 256 MB in all four. Moving CPU memory from 1024 to 1536 MB improved latency in every new run but increased billed compute in every run. These are warm billed GB-seconds, excluding request, S3 and logging charges; they do not establish a universal cheapest configuration.
+
+### Local integration remained repeatable, without reproducing AWS performance
+
+At 1024 MB, the four LocalStack CPU handler means ranged from **85.78 to 87.48 ms**, compared with **189.25–191.49 ms** on AWS. Local S3-heavy handler means were **6.19–6.45 ms**, compared with **29.39–31.98 ms** on AWS. Both sides here use `handlerMs`; these values have different boundaries from the REPORT table above.
+
+The local snapshots again recorded no explicit per-container CPU quota or memory cap in the observed Docker limit fields. The Docker VM and host still constrain resources. Configured Lambda memory therefore does not recreate AWS's CPU allocation locally, and the HTTP local S3 path differs from AWS HTTPS. The new successful runs **do not explain or resolve the unexpected 28 October variability**; those results remain excluded from this article's conclusions. The 29 October matrix is also preserved separately and is not included in these four-run calculations.
+
+The [four-pair comparison](benchmark-runs/20261104-comparison/README.md) contains all 11 memory settings, run-by-run compute values, means and percentiles, source links, and public metadata. Raw invocation evidence remains local; aggregate summaries and redacted reproducibility metadata are published.
 
 ## What surprised me?
 
@@ -218,7 +261,7 @@ The LocalStack investigation was another useful distinction: identical code, dat
 
 **Lambda memory sizing depends on the workload.** In this experiment, increasing memory substantially improved the calculation-heavy path until roughly **3072 MB**, after which gains were minimal. The small-object S3-heavy path reached diminishing returns much earlier, around **1024 MB**.
 
-There was no universal fastest-and-cheapest setting. The lowest tested memory configuration consumed the fewest billed GB-seconds but took longer. Increasing CPU memory from 1024 to 1536 MB improved latency on all three AWS days, yet the billed-compute saving appeared on only one of them.
+There was no universal fastest-and-cheapest setting. The original October runs favoured 256 MB for billed compute; the November repeats split the CPU minimum between 256 and 512 MB. Both low-memory settings took longer than the higher-memory latency plateau. Increasing CPU memory from 1024 to 1536 MB improved latency on all three October AWS days and all four November runs, yet the billed-compute saving appeared only in the first October run.
 
 The practical lesson is to **benchmark the actual workload, keep repeated measurements visible, and decide against a latency target and compute-consumption budget**. LocalStack is useful for validating integration and behaviour; AWS measurements are needed for AWS performance and memory-sizing decisions.
 
@@ -230,8 +273,9 @@ Those limitations do not invalidate the measured patterns; they define what the 
 
 ## Evidence and reproducibility
 
-The source code, deployment and runner instructions are in the [project README](README.md). The raw measurements and summaries remain available for independent inspection:
+The source code, deployment and runner instructions are in the [project README](README.md). Published summaries and redacted metadata support inspection; new raw evidence stays local:
 
+- **4 November, four full pairs:** [comparison, aggregate measurements and sources](benchmark-runs/20261104-comparison/README.md).
 - **9 October AWS:** first full benchmark; see [`benchmark-runs/`](benchmark-runs/).
 - **14 October AWS:** [summary CSV](benchmark-runs/20261014T091601316296Z/summary.csv) and [completion record](benchmark-runs/20261014T091601316296Z/final-summary.json).
 - **19 October AWS:** [combined summary](benchmark-runs/20261019T081929658746Z/summary.json), [per-repetition summary](benchmark-runs/20261019T081929658746Z/summary-by-repetition.json), [raw invocations](benchmark-runs/20261019T081929658746Z/invocations.jsonl) and [completion record](benchmark-runs/20261019T081929658746Z/final-summary.json).

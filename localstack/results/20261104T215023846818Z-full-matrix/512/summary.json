@@ -1,0 +1,181 @@
+{
+  "environment": "localstack",
+  "stopReason": "Completed",
+  "expectedInvocations": 132,
+  "recordedInvocations": 132,
+  "valid": 132,
+  "cleanupErrors": [],
+  "workloads": [
+    {
+      "workload": "cpu",
+      "warmCollected": 60,
+      "coldCollected": 0,
+      "s3Ms": {
+        "mean": 5.95724735,
+        "p50": 5.999584,
+        "p95": 8.216625
+      },
+      "cpuMs": {
+        "mean": 77.73646808333334,
+        "p50": 76.227458,
+        "p95": 80.296167
+      },
+      "handlerMs": {
+        "mean": 86.55452711666666,
+        "p50": 85.793917,
+        "p95": 89.736834
+      },
+      "callerMs": {
+        "mean": 349.37935558300524,
+        "p50": 343.3451669989154,
+        "p95": 374.12549999862676
+      }
+    },
+    {
+      "workload": "io",
+      "warmCollected": 60,
+      "coldCollected": 0,
+      "s3Ms": {
+        "mean": 6.277268816666666,
+        "p50": 6.133416,
+        "p95": 8.706125
+      },
+      "cpuMs": {
+        "mean": 0.09243193333333334,
+        "p50": 0.089667,
+        "p95": 0.165833
+      },
+      "handlerMs": {
+        "mean": 6.371819433333333,
+        "p50": 6.300375,
+        "p95": 8.784708
+      },
+      "callerMs": {
+        "mean": 282.5951118496353,
+        "p50": 269.33358399401186,
+        "p95": 358.6222500016447
+      }
+    }
+  ],
+  "primaryMetric": "handlerMs",
+  "measurementMetrics": {
+    "handlerMs": "Java handler elapsed time; primary local metric; excludes initialization, framework decoding/serialization and log emission",
+    "s3Ms": "Java elapsed time for full SDK GET, buffering and Content-Length validation",
+    "jsonMs": "Java dataset JSON deserialization; null for io",
+    "cpuMs": "Java elapsed calculation time for cpu or CRC32 time for io; not CPU utilization",
+    "callerMs": "Python elapsed time including AWS CLI process, invocation and local request/response/log processing",
+    "durationMs": "Not summarized locally; LocalStack REPORT Duration is not AWS REPORT Duration"
+  },
+  "repetitions": [
+    {
+      "repetition": 1,
+      "workloads": [
+        {
+          "workload": "cpu",
+          "warmCollected": 30,
+          "coldCollected": 0,
+          "s3Ms": {
+            "mean": 6.003737733333334,
+            "p50": 6.18425,
+            "p95": 8.225834
+          },
+          "cpuMs": {
+            "mean": 79.08101400000001,
+            "p50": 75.353542,
+            "p95": 95.412292
+          },
+          "handlerMs": {
+            "mean": 88.12086526666667,
+            "p50": 84.410083,
+            "p95": 103.451583
+          },
+          "callerMs": {
+            "mean": 357.243752899861,
+            "p50": 352.5117500030319,
+            "p95": 375.9552499977872
+          }
+        },
+        {
+          "workload": "io",
+          "warmCollected": 30,
+          "coldCollected": 0,
+          "s3Ms": {
+            "mean": 6.1063237,
+            "p50": 6.228209,
+            "p95": 7.879917
+          },
+          "cpuMs": {
+            "mean": 0.09665689999999999,
+            "p50": 0.090125,
+            "p95": 0.179208
+          },
+          "handlerMs": {
+            "mean": 6.205105566666666,
+            "p50": 6.336875,
+            "p95": 8.040791
+          },
+          "callerMs": {
+            "mean": 280.2796972328603,
+            "p50": 269.2821250020643,
+            "p95": 354.20179199718405
+          }
+        }
+      ]
+    },
+    {
+      "repetition": 2,
+      "workloads": [
+        {
+          "workload": "cpu",
+          "warmCollected": 30,
+          "coldCollected": 0,
+          "s3Ms": {
+            "mean": 5.910756966666667,
+            "p50": 5.921,
+            "p95": 7.73925
+          },
+          "cpuMs": {
+            "mean": 76.39192216666667,
+            "p50": 76.8845,
+            "p95": 80.140083
+          },
+          "handlerMs": {
+            "mean": 84.98818896666667,
+            "p50": 85.986833,
+            "p95": 89.177792
+          },
+          "callerMs": {
+            "mean": 341.51495826614945,
+            "p50": 340.5936670023948,
+            "p95": 349.67499999766005
+          }
+        },
+        {
+          "workload": "io",
+          "warmCollected": 30,
+          "coldCollected": 0,
+          "s3Ms": {
+            "mean": 6.448213933333333,
+            "p50": 5.942458,
+            "p95": 14.879084
+          },
+          "cpuMs": {
+            "mean": 0.08820696666666666,
+            "p50": 0.089,
+            "p95": 0.165833
+          },
+          "handlerMs": {
+            "mean": 6.5385333,
+            "p50": 5.98025,
+            "p95": 14.923458
+          },
+          "callerMs": {
+            "mean": 284.9105264664104,
+            "p50": 269.33358399401186,
+            "p95": 369.74212499626447
+          }
+        }
+      ]
+    }
+  ]
+}

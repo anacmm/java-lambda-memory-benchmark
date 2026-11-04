@@ -8,7 +8,8 @@ Compare CPU-heavy and S3 I/O-heavy workload profiles in the same environment at
 256, 512, 1024, 1536, 2048, 3072, and 4096 MB. Within each workload, memory allocation
 is the only intended variable. Across workloads, workload type is intentionally
 the second experimental dimension. The article uses the 9, 14 and 19 October AWS
-runs and corresponding LocalStack experiments as its evidence.
+runs and corresponding LocalStack experiments, plus four complete pairs from
+4 November, as its evidence.
 A separate [LocalStack experiment](localstack/README.md) tests the same native
 application locally, with evidence kept under `localstack/results/`.
 
@@ -23,6 +24,21 @@ until additional benchmarks support reassessment. See the preserved
 The full 29 October 2026 matrix timings are available in the
 [AWS and LocalStack comparison](benchmark-runs/20261029-comparison/README.md),
 with links to all JSON/CSV summaries and the complete warm timing table.
+
+## 4 November 2026 runs
+
+Four complete pairs ran LocalStack first, then AWS in `eu-west-2`. All eight
+matrices recorded 1,452 valid calls each, with no failed or invalid measurements.
+Local cleanup succeeded and AWS memory was restored to 1024 MB after each run.
+See the [four-pair comparison](benchmark-runs/20261104-comparison/README.md)
+for source links, all 11 memory settings, billed compute, handler comparisons,
+means and percentiles. The [article](aws-lambda-memory-article.md) discusses the
+new findings while retaining the original October results separately.
+
+The accidentally deployed `eu-west-1` benchmark stack was deleted before these AWS
+runs; no benchmark calls ran there. Shared CDK bootstrap resources were retained.
+Raw evidence and private metadata remain local; reviewed summaries and redacted
+metadata are published. Previous results are preserved.
 
 ## Architecture and layout
 
@@ -177,7 +193,11 @@ with the commands below. Local container timings are not AWS benchmark results.
 
 ## Deploy
 
-Choose one region and keep it fixed. All following AWS commands use that region.
+Use `eu-west-2` for this experiment and keep it fixed. Set both region variables
+in every new terminal session. Pass the region explicitly to CDK so a configured
+profile default cannot deploy the stack elsewhere. All following AWS commands use
+that region. Verify the deployment Stack ARN contains `:eu-west-2:` before running
+the AWS matrix; deployment outputs contain resource names, not their region.
 
 ```bash
 export AWS_REGION=eu-west-2
@@ -186,9 +206,9 @@ aws sts get-caller-identity
 
 cd infra
 # Once per account/region; omit if already bootstrapped.
-cdk bootstrap
-cdk synth
-cdk deploy JavaBenchmarkStack --parameters MemorySize=1024 --outputs-file outputs.json
+cdk bootstrap --region "$AWS_REGION"
+cdk synth --region "$AWS_REGION"
+cdk deploy JavaBenchmarkStack --region "$AWS_REGION" --parameters MemorySize=1024 --outputs-file outputs.json
 cd ..
 ```
 
@@ -386,7 +406,7 @@ Check the recorded artifact and object SHA-256 before each trial. Change only me
 
 ```bash
 cd infra
-cdk deploy JavaBenchmarkStack --parameters MemorySize=256 --outputs-file outputs.json
+cdk deploy JavaBenchmarkStack --region "$AWS_REGION" --parameters MemorySize=256 --outputs-file outputs.json
 cd ..
 aws lambda wait function-updated-v2 --function-name "$BENCHMARK_FUNCTION"
 ```
@@ -491,7 +511,7 @@ bucket policy, and log group. Log data is deleted too.
 BENCHMARK_BUCKET=$(jq -r '.JavaBenchmarkStack.BucketName' infra/outputs.json)
 aws s3 rm "s3://$BENCHMARK_BUCKET" --recursive
 cd infra
-cdk destroy JavaBenchmarkStack
+cdk destroy JavaBenchmarkStack --region "$AWS_REGION"
 cd ..
 ```
 

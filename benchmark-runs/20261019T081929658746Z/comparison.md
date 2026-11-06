@@ -42,7 +42,7 @@ The local S3/Lambda flow has now run successfully twice on Apple Silicon using t
 
 The 19 October local run completed **132 valid invocations**, with **60 warm collected samples and six warmups per workload**, no failures and no cleanup errors. Its one cold invocation occurred during the first CPU warmup. All response shapes and checksums matched the expected fixture results. The local function and bucket were removed by the runner, and Compose was stopped after collection. All earlier evidence was retained.
 
-Sources: [local combined and repetition summaries](../../localstack/results/20261019T082816425083Z/summary.json), [raw measurements](../../localstack/results/20261019T082816425083Z/invocations.jsonl), and [environment metadata](../../localstack/results/20261019T082816425083Z/metadata.json).
+Sources: [local combined and repetition summaries](../../localstack/results/20261019T082816425083Z/summary.json), [raw measurements](../../localstack/results/20261019T082816425083Z/invocations.jsonl), and [environment metadata](../../localstack/results/20261019T082816425083Z/metadata.public.json).
 
 ## Compare the same timing boundary
 

@@ -1,5 +1,12 @@
 # How Much Memory Does a Java Lambda Really Need?
 
+> **Extended technical write-up / research notes, not the final LinkedIn article.**
+> This file retains the original October narrative and a 4 November evidence update.
+> Its sections describe different stages of the experiment; historical tables remain
+> useful supporting context. The final LinkedIn article will be published separately.
+> For the latest validated measurements, start with the [4 November comparison](benchmark-runs/20261104-comparison/README.md)
+> or the [repository navigation](README.md#start-here).
+
 ## CPU-heavy vs S3-heavy workloads on AWS Lambda
 
 > **Updated 4 November 2026.** The original evidence comprises three AWS runs (9, 14 and 19 October) and two LocalStack experiments (14 and 19 October). Four new LocalStack/AWS pairs extend the matrix to 10240 MB. Results concern primarily **warm execution** and **billed Lambda compute consumption**, not a complete production cost model.

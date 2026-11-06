@@ -4,14 +4,16 @@ Every pair ran LocalStack to completion before AWS in `eu-west-2`. Each environm
 
 These are four runs on one day, not four independent days or 240 independent execution environments. Calls share warm environments; keep run and repetition identities when interpreting variability. The native ZIP and dataset hashes match across all eight matrices. The 28 October results remain under investigation.
 
+[Project navigation](../../README.md#start-here) · [Historical run index](../README.md)
+
 ## Sources
 
 | Pair | AWS | LocalStack |
 | --- | --- | --- |
-| 1 | [20261104T145606566518Z](../20261104T145606566518Z/final-summary.json) | [20261104T142005953270Z-full-matrix](../../localstack/results/20261104T142005953270Z-full-matrix/matrix-summary.public.json) |
-| 2 | [20261104T154654746990Z](../20261104T154654746990Z/final-summary.json) | [20261104T153706366094Z-full-matrix](../../localstack/results/20261104T153706366094Z-full-matrix/matrix-summary.public.json) |
-| 3 | [20261104T173911446464Z](../20261104T173911446464Z/final-summary.json) | [20261104T172931495595Z-full-matrix](../../localstack/results/20261104T172931495595Z-full-matrix/matrix-summary.public.json) |
-| 4 | [20261104T220003251163Z](../20261104T220003251163Z/final-summary.json) | [20261104T215023846818Z-full-matrix](../../localstack/results/20261104T215023846818Z-full-matrix/matrix-summary.public.json) |
+| 1 | [Counts](../20261104T145606566518Z/final-summary.json) · [timings](../20261104T145606566518Z/summary.csv) · [repetitions](../20261104T145606566518Z/summary-by-repetition.csv) · [metadata](../20261104T145606566518Z/metadata.public.json) | [Matrix](../../localstack/results/20261104T142005953270Z-full-matrix/matrix-summary.public.json) · [per-memory folders](../../localstack/results/20261104T142005953270Z-full-matrix/) |
+| 2 | [Counts](../20261104T154654746990Z/final-summary.json) · [timings](../20261104T154654746990Z/summary.csv) · [repetitions](../20261104T154654746990Z/summary-by-repetition.csv) · [metadata](../20261104T154654746990Z/metadata.public.json) | [Matrix](../../localstack/results/20261104T153706366094Z-full-matrix/matrix-summary.public.json) · [per-memory folders](../../localstack/results/20261104T153706366094Z-full-matrix/) |
+| 3 | [Counts](../20261104T173911446464Z/final-summary.json) · [timings](../20261104T173911446464Z/summary.csv) · [repetitions](../20261104T173911446464Z/summary-by-repetition.csv) · [metadata](../20261104T173911446464Z/metadata.public.json) | [Matrix](../../localstack/results/20261104T172931495595Z-full-matrix/matrix-summary.public.json) · [per-memory folders](../../localstack/results/20261104T172931495595Z-full-matrix/) |
+| 4 | [Counts](../20261104T220003251163Z/final-summary.json) · [timings](../20261104T220003251163Z/summary.csv) · [repetitions](../20261104T220003251163Z/summary-by-repetition.csv) · [metadata](../20261104T220003251163Z/metadata.public.json) | [Matrix](../../localstack/results/20261104T215023846818Z-full-matrix/matrix-summary.public.json) · [per-memory folders](../../localstack/results/20261104T215023846818Z-full-matrix/) |
 
 AWS source folders include combined and per-repetition JSON/CSV summaries, configuration counts and `metadata.public.json`. Local source folders include a public matrix summary and per-memory summaries/public metadata. Original metadata, raw invocation logs/responses, JSONL and downloaded fixtures remain local.
 

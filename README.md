@@ -4,12 +4,51 @@ A controlled experiment using Java 21, Quarkus Native/Mandrel, ARM64, AWS SDK fo
 Java v2, Maven, and Java CDK. The research question is: **Does the optimal AWS
 Lambda memory configuration depend on what a Java Lambda actually does?**
 
+## Start here
+
+- **Understand the experiment:** [overview](#experiment-overview), [architecture](#architecture-and-layout),
+  [CPU-heavy calculation](#cpu-heavy-workload) and [S3-heavy processing](#io-heavy-workload-and-object-size).
+- **Read the findings:** [main findings](#main-findings) and the
+  [latest validated comparison: 4 November 2026](benchmark-runs/20261104-comparison/README.md).
+- **Inspect the evidence:** [historical run index and root JSON guide](benchmark-runs/README.md),
+  including the four sequential AWS/LocalStack pairs and older experiments.
+- **Reproduce the experiment:** [prerequisites](#prerequisites), [tests and native build](#tests-and-builds),
+  [AWS deployment](#deploy), [automated AWS trials](#automated-trials) and
+  [LocalStack instructions](localstack/README.md).
+- **Understand publication status and privacy:** [extended research notes](aws-lambda-memory-article.md)
+  and [publishing/privacy guidance](PUBLISHING.md). The notes are not the final LinkedIn article.
+
+## Main findings
+
+For these synthetic, primarily warm workloads:
+
+- CPU-heavy execution benefits substantially from more memory, then approximately
+  plateaus around **3,072 MB**.
+- Small-object S3-heavy processing reaches diminishing returns around **1,024 MB**.
+- Faster execution does not necessarily use fewer **billed GB-seconds**; these measure
+  compute consumption, not the complete monetary cost.
+- LocalStack validates functionality, but does not reliably reproduce AWS CPU scaling,
+  execution duration or the optimal AWS memory configuration.
+- Repetition matters: individual runs can contain anomalies. The four November pairs
+  ran on **one day**, not four independent experimental days. The 28 October results
+  remain under investigation and are excluded from validated findings.
+
+See the [November comparison](benchmark-runs/20261104-comparison/README.md) for the
+analysis and underlying data. It separates AWS REPORT duration from Java handler
+`handlerMs`, and means from p50/p95 percentiles. Compare environments using handler
+time with the same boundary; matching outputs establishes functional parity, not
+performance parity.
+
+## Experiment overview
+
 Compare CPU-heavy and S3 I/O-heavy workload profiles in the same environment at
-256, 512, 1024, 1536, 2048, 3072, and 4096 MB. Within each workload, memory allocation
+the original seven memory settings (256, 512, 1024, 1536, 2048, 3072 and 4096 MB),
+extended to 11 settings (256–10240 MB) in the November matrix. Within each
+workload, memory allocation
 is the only intended variable. Across workloads, workload type is intentionally
-the second experimental dimension. The article uses the 9, 14 and 19 October AWS
-runs and corresponding LocalStack experiments, plus four complete pairs from
-4 November, as its evidence.
+the second experimental dimension. The extended research notes use the 9, 14
+and 19 October AWS runs and corresponding LocalStack experiments, plus four
+complete pairs from 4 November, as their evidence.
 A separate [LocalStack experiment](localstack/README.md) tests the same native
 application locally, with evidence kept under `localstack/results/`.
 
@@ -17,8 +56,8 @@ The **28 October 2026 results are under investigation** due to unexpected
 variability, particularly in LocalStack I/O performance. Their raw measurements,
 graphs and run documentation are preserved unchanged for comparison with future
 runs. Graphs and summaries remain in Git; raw evidence stays local and is ignored
-for commits. These results are excluded from the main article and its conclusions
-until additional benchmarks support reassessment. See the preserved
+for commits. These results are excluded from validated findings and the research
+notes' conclusions until additional benchmarks support reassessment. See the preserved
 [28 October comparison](benchmark-runs/20261028-two-runs/README.md).
 
 The full 29 October 2026 matrix timings are available in the
@@ -32,7 +71,7 @@ matrices recorded 1,452 valid calls each, with no failed or invalid measurements
 Local cleanup succeeded and AWS memory was restored to 1024 MB after each run.
 See the [four-pair comparison](benchmark-runs/20261104-comparison/README.md)
 for source links, all 11 memory settings, billed compute, handler comparisons,
-means and percentiles. The [article](aws-lambda-memory-article.md) discusses the
+means and percentiles. The [extended research notes](aws-lambda-memory-article.md) discuss the
 new findings while retaining the original October results separately.
 
 The accidentally deployed `eu-west-1` benchmark stack was deleted before these AWS
@@ -186,10 +225,12 @@ build and the S3 invocation below are the deployment smoke test.
 
 The earlier CPU-only implementation was locally validated on Apple Silicon with
 an ARM64 native build, AL2023 container invocations against local Lambda/S3 stubs,
-and CDK synthesis. That validation does not establish the revised I/O path's native
-behavior. Current two-workload validation is recorded after the checks complete.
-Real AWS deployment, S3 HTTPS access, and Lambda measurements remain to be verified
-with the commands below. Local container timings are not AWS benchmark results.
+and CDK synthesis. That early validation alone did not establish the revised I/O
+path's native behavior. Completed two-workload AWS and LocalStack measurements are
+now available in the [run index](benchmark-runs/README.md), including the
+[4 November comparison](benchmark-runs/20261104-comparison/README.md). Use the
+commands below to reproduce deployment and invocation checks. Local container
+timings are not AWS benchmark results.
 
 ## Deploy
 
@@ -479,10 +520,12 @@ bootstrap bucket. CDK/CloudFormation/IAM have no separate workload usage fee.
 Bootstrap also provisions tooling resources such as an ECR repository; this POC
 does not publish images to it. There is no NAT gateway or provisioned concurrency.
 
-### Planned research output (no AWS results yet)
+### Historical planning template
 
-For a stated statistic (for example, warm p50 duration) and a stated cost basis
-(for example, mean cost per 1,000 warm invocations), populate:
+This original blank table is retained as a planning template, not a results table.
+Completed measurements are linked in the [run index](benchmark-runs/README.md).
+For a future comparison, choose a stated statistic (for example, warm p50 duration)
+and a stated cost basis (for example, mean cost per 1,000 warm invocations):
 
 | Memory | CPU-heavy duration | CPU-heavy cost | I/O-heavy duration | I/O-heavy cost |
 | --- | ---: | ---: | ---: | ---: |

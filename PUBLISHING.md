@@ -4,8 +4,8 @@ This repository includes the application, infrastructure source, runners, articl
 dataset, and recorded invocation results and summaries from AWS and LocalStack.
 
 Original run `metadata.json` files stay on the author's machine and are ignored by
-Git. They contain deployment identifiers or absolute workstation paths. Each run
-includes a `metadata.public.json` copy with AWS caller identity/resource identifiers
+Git. They contain deployment identifiers or absolute workstation paths. Where
+available, a run includes a `metadata.public.json` copy with AWS caller identity/resource identifiers
 removed and project paths made relative. Artifact and dataset hashes, configuration,
 sample counts, timing definitions, runtime information and available Docker resource
 metadata remain available. Some historical reports refer to `metadata.json`; use
@@ -48,3 +48,21 @@ The article retains the 9, 14 and 19 October evidence and now separately analyse
 four complete LocalStack/AWS pairs from 4 November. The 29 October matrix remains
 a separate recorded comparison. The November repetitions do not resolve the cause
 of the 28 October variability; those results remain excluded from conclusions.
+
+## Public documentation review — 6 November 2026
+
+The current tracked tree was reviewed for credential patterns, real AWS account
+identifiers, email addresses and absolute home-directory paths. Historical base64
+Lambda log tails were decoded for the same checks; tracked invocation responses
+contained the expected CPU/I/O benchmark output fields. No suspicious matches
+were found in this review. The all-zero account ARN in the local runner and its
+historical snapshot is an intentional emulator placeholder, not a real account.
+Request IDs in historical evidence identify invocations and are not credentials.
+
+This is a review of the current tracked files, not a guarantee about all secret
+formats, remote branches or previous Git history. The research notes intentionally
+retain named contributors and LinkedIn links, including links labelled as profile
+searches; verify attribution before using them in the final article. Raw evidence
+was not edited or deleted during this documentation review.
+
+[Repository navigation](README.md#start-here) · [Evidence index](benchmark-runs/README.md)
